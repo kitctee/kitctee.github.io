@@ -1,0 +1,114 @@
+.sec-lead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.sec-lead:hover .lead-stripe:before {
+  -webkit-animation: lead-ani 1s linear infinite;
+          animation: lead-ani 1s linear infinite;
+}
+
+.sec-lead-red {
+  text-align: center;
+  background-color: #e93323;
+}
+
+.sec-lead-red h2,
+.sec-lead-red p {
+  color: #fff;
+}
+
+.lead-textbox {
+  max-width: 1160px;
+  margin: auto;
+  padding: 2em 0;
+}
+
+.lead-stripe {
+  overflow: hidden;
+  position: absolute;
+  top: 3vw;
+  left: 3vw;
+  right: 3vw;
+  bottom: 3vw;
+  z-index: 1;
+  margin: auto;
+}
+
+@media only screen and (max-width: 568px) {
+  .lead-stripe {
+    top: 0vw;
+    left: 0vw;
+    right: 0vw;
+    bottom: 0vw;
+  }
+}
+
+.lead-stripe:before {
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  content: "";
+  position: absolute;
+  top: -100em;
+  left: -40em;
+  right: -40em;
+  bottom: -100em;
+  z-index: 1;
+  margin: auto;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(2.38%, #878787), color-stop(2.38%, #fff), color-stop(50%, #fff), color-stop(50%, #878787), color-stop(52.38%, #878787), color-stop(52.38%, #fff), to(#fff));
+  background-image: linear-gradient(90deg, #878787 2.38%, #fff 2.38%, #fff 50%, #878787 50%, #878787 52.38%, #fff 52.38%, #fff 100%);
+  background-size: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@-webkit-keyframes lead-ani {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 30px;
+  }
+}
+
+@keyframes lead-ani {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 30px;
+  }
+}
+
+.lead-box {
+  position: relative;
+  z-index: 2;
+  max-width: 1160px;
+  margin: auto;
+  padding: 3.5em 5em 4em;
+  text-align: center;
+  border: 9px solid #e93323;
+  border-radius: 0.5em;
+  background-color: #fff;
+  -webkit-box-shadow: 2em 2.5em #e93323;
+          box-shadow: 2em 2.5em #e93323;
+}
+
+@media only screen and (max-width: 568px) {
+  .lead-box {
+    border-width: 4px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .lead-box {
+    padding: 4vmax 5vmax 4.5vmax;
+    -webkit-box-shadow: 3vw 4vw #e93323;
+            box-shadow: 3vw 4vw #e93323;
+  }
+}

@@ -1,0 +1,113 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+@import "_var";
+
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Roboto Condensed", sans-serif;
+  color: $J_red;
+}
+p,
+.p {
+  font-family: sans-serif;
+}
+a {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  overflow: hidden;
+  display: block;
+  padding: 3vmax 0;
+  &.full-sec {
+    min-height: 100vh;
+  }
+  @include media-1440 {
+    padding: 4vmax 0;
+  }
+  @include media-1024 {
+    padding: 6vmax 0;
+  }
+  // @include media-568 {
+  //   padding: 6vmax 0;
+  // }
+}
+.h2,
+h2 {
+  font-size: 3.5em;
+  // font-size: 350%;
+  font-weight: bold;
+  text-transform: uppercase;
+  + p {
+    margin-top: 2em;
+  }
+  @include media-568 {
+    // font-size: 2.75em;
+    font-size: 6vmax;
+  }
+}
+h3,
+.h3 {
+  font-size: 2.25em;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include media-568 {
+    font-size: 2em;
+  }
+}
+p,
+.p {
+  font-size: 1em;
+  line-height: 3;
+}
+img {
+  display: block;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
+.j-group {
+  display: flex;
+  align-items: center;
+}
+.j-flex {
+  flex: 1;
+  width: auto;
+}
+
+.max-wrapper {
+  width: 100%;
+  // max-width: 1600px;
+  margin: auto;
+  padding: 0 8vw;
+  &.large {
+    max-width: 1800px;
+    padding: 0 4vw;
+  }
+  @include media-568 {
+    &,
+    &.large {
+      padding: 0 8vw;
+    }
+  }
+}
+
+// @import "hero";
+// @import "lead";
+// @import "story";
+// @import "message";
+// @import "action";
