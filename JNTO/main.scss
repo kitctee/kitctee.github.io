@@ -6,7 +6,6 @@
 @import "_var";
 
 div,
-span,
 h1,
 h2,
 h3,
@@ -26,6 +25,28 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+}
+img {
+  // opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+button {
+  overflow: hidden;
+  padding: 0;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  background: none;
+  user-select: none;
+  cursor: pointer;
+  .btn-text {
+    user-select: none;
+    text-decoration: underline;
+  }
+}
+.red-text {
+  color: $J_red;
 }
 
 section {

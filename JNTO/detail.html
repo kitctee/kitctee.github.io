@@ -27,6 +27,7 @@
     />
   </head>
   <body>
+    <div class="overlay" id="overlay"></div>
     <section class="sec-hero narrow">
       <div class="max-wrapper">
         <div class="hero-ball"></div>
@@ -304,83 +305,90 @@
               >
             </p>
           </div>
-          <a href="#" class="btn-join"
-            ><span class="btn-text">Join Now!</span></a
-          >
-          <a href="#" class="btn-t&c"
-            ><span class="btn-text">條款及細則</span></a
-          >
+
+          <div class="btn-join-wrap">
+            <a href="#" class="btn-join"
+              ><span class="btn-text">Join Now!</span></a
+            >
+            <button class="btn-t_and_c" id="btn-t_and_c">
+              <span class="btn-text">條款及細則</span>
+            </button>
+          </div>
         </div>
-        <div class="t&c-wrap">
-          <button class="close-btn"></button>
-          <p>"Travel to Japan! Get inspired!" 活動條款及細則：</p>
-          <ol class="num-list">
-            <li>
-              此<span class="red-text">Youth Campaign</span
-              >活動由日本國家旅遊局（下稱”JNTO”）舉辦，只限香港地區用戶參加（下稱”參加者”）。
-            </li>
-            <li>
-              所有參加者必須同意參與活動並遵守活動條款及細則。在得到參加者的同意下，JNTO會使用參加者所提供的個人資料作市場推廣及宣傳用途。
-            </li>
-            <li>
-              活動時間為2020年12月17日至2021年1月22日23時59分（香港時間），以JNTO之伺服器為準。
-            </li>
-            <li>參加者須年滿十八歲及持有有效香港永久性居民身份證。</li>
-            <li class="red-text">
-              活動期內，參加者必須完成以下四個步驟：
-              <ol class="roman-list">
-                <li>
-                  (i)追蹤「Visit Japan HK」官方Instagram帳號 (@visitjapanhk)。
-                </li>
-                <li>
-                  (ii)把任何一條在「Visit Japan HK」官方Instagram帳號中的Youth
-                  Campaign活動影片帖文分享至你個人的IG
-                  Story（限時動態），加上你創作的 #hashtag 及Tag 3位朋友，並將IG
-                  Story截圖以作日後換領此活動獎品之用。
-                </li>
-                <li>
-                  (iii)於活動專頁回答有關活動影片內容的選擇題，並分享你創作的
-                  #hashtag。
-                </li>
-                <li>(iv)填寫個人資料及完成遞交表格方為成功參加活動。</li>
-              </ol>
-            </li>
-            <li>每人只限投稿一次。</li>
-            <li class="red-text">
-              參加者請注意創作 #hashtag
-              的內容必須與日本旅遊有關，JNTO會選出入圍作品並上載至專頁，如有任何爭議，JNTO有最終決定權，所有參加者不得異議。
-            </li>
-            <li>
-              <span class="red-text"
-                >JNTO將選出最有心思的16位參加者成為得獎者</span
-              >（下稱”得奬者”）。獎品設頭獎（1名）、二獎（5名）及三獎（10名），分別如下：
-              頭獎: 豪華日式雙人鐡板燒套餐 (價值約$3,500，名額一名) 二奬: Don
-              Don Donki 購物禮券 (價值$500，名額五名)  三奬: 日式甜品禮券
-              (價值$210，名額十名)
-            </li>
-            <li>所有獎品不得退換或兌換現金，不得轉換或轉售他人。</li>
-            <li>
-              得獎者須接受相關服務供應商之條款及細則約束。所有獎品兌換詳情及內容或會因應服務供應商的營運情況作出調整。
-            </li>
-            <li>得獎者接受獎品，即代表同意與獎品相關之安排。</li>
-            <li>
-              得獎結果將於<span class="red-text">2月上旬</span>於「Visit Japan
-              HK」Facebook專頁公佈。
-            </li>
-            <li>
-              得獎者將收到專人聯絡通知，並須於通知發出後5個工作天內回覆，若得獎者逾期沒有回覆得獎訊息，得獎資格將被取消而不作另行通知。
-            </li>
-            <li>
-              JNTO不會對獎品安排及服務質素作出保證及責任承擔，亦不會對任何由於兌換獎品而遭受的任何損失或損害承擔任何責任（包括但不限於間接或後果性損失）。
-            </li>
-            <li>
-              合資格參加者參與本活動，即代表已閲讀、明白及同意本條款及細則。如有違反，JNTO有權取消其參加或得獎資格，而毋須作事前通知。
-            </li>
-            <li>
-              任何因電腦、網絡等技術問題導致參加者所遞交的資料有遲延、遺失、錯誤、無法辨識等情況，以致參加此項活動所造成之影響及損失，JNTO不承擔任何責任。
-            </li>
-            <li>如有任何爭議，JNTO有最終決定權，所有參加者不得異議。</li>
-          </ol>
+        <div class="lead-box t_and_c">
+          <button class="close-btn" id="close-btn"></button>
+          <div class="t_and_c-wrap">
+            <p class="t_and_c-header">
+              "Travel to Japan! Get inspired!" 活動條款及細則：
+            </p>
+            <ol class="num-list">
+              <li>
+                此<span class="red-text">Youth Campaign</span
+                >活動由日本國家旅遊局（下稱”JNTO”）舉辦，只限香港地區用戶參加（下稱”參加者”）。
+              </li>
+              <li>
+                所有參加者必須同意參與活動並遵守活動條款及細則。在得到參加者的同意下，JNTO會使用參加者所提供的個人資料作市場推廣及宣傳用途。
+              </li>
+              <li>
+                活動時間為2020年12月17日至2021年1月22日23時59分（香港時間），以JNTO之伺服器為準。
+              </li>
+              <li>參加者須年滿十八歲及持有有效香港永久性居民身份證。</li>
+              <li class="red-text">
+                活動期內，參加者必須完成以下四個步驟：
+                <ol class="roman-list">
+                  <li>
+                    追蹤「Visit Japan HK」官方Instagram帳號 (@visitjapanhk)。
+                  </li>
+                  <li>
+                    把任何一條在「Visit Japan HK」官方Instagram帳號中的Youth
+                    Campaign活動影片帖文分享至你個人的IG
+                    Story（限時動態），加上你創作的 #hashtag 及Tag
+                    3位朋友，並將IG Story截圖以作日後換領此活動獎品之用。
+                  </li>
+                  <li>
+                    於活動專頁回答有關活動影片內容的選擇題，並分享你創作的
+                    #hashtag。
+                  </li>
+                  <li>填寫個人資料及完成遞交表格方為成功參加活動。</li>
+                </ol>
+              </li>
+              <li>每人只限投稿一次。</li>
+              <li class="red-text">
+                參加者請注意創作 #hashtag
+                的內容必須與日本旅遊有關，JNTO會選出入圍作品並上載至專頁，如有任何爭議，JNTO有最終決定權，所有參加者不得異議。
+              </li>
+              <li>
+                <span class="red-text"
+                  >JNTO將選出最有心思的16位參加者成為得獎者</span
+                >（下稱”得奬者”）。獎品設頭獎（1名）、二獎（5名）及三獎（10名），分別如下：
+                <br />　頭獎: 豪華日式雙人鐡板燒套餐 (價值約$3,500，名額一名)<br />　二奬:
+                Don Don Donki 購物禮券 (價值$500，名額五名)<br />　三奬:
+                日式甜品禮券 (價值$210，名額十名)
+              </li>
+              <li>所有獎品不得退換或兌換現金，不得轉換或轉售他人。</li>
+              <li>
+                得獎者須接受相關服務供應商之條款及細則約束。所有獎品兌換詳情及內容或會因應服務供應商的營運情況作出調整。
+              </li>
+              <li>得獎者接受獎品，即代表同意與獎品相關之安排。</li>
+              <li>
+                得獎結果將於<span class="red-text">2月上旬</span>於「Visit Japan
+                HK」Facebook專頁公佈。
+              </li>
+              <li>
+                得獎者將收到專人聯絡通知，並須於通知發出後5個工作天內回覆，若得獎者逾期沒有回覆得獎訊息，得獎資格將被取消而不作另行通知。
+              </li>
+              <li>
+                JNTO不會對獎品安排及服務質素作出保證及責任承擔，亦不會對任何由於兌換獎品而遭受的任何損失或損害承擔任何責任（包括但不限於間接或後果性損失）。
+              </li>
+              <li>
+                合資格參加者參與本活動，即代表已閲讀、明白及同意本條款及細則。如有違反，JNTO有權取消其參加或得獎資格，而毋須作事前通知。
+              </li>
+              <li>
+                任何因電腦、網絡等技術問題導致參加者所遞交的資料有遲延、遺失、錯誤、無法辨識等情況，以致參加此項活動所造成之影響及損失，JNTO不承擔任何責任。
+              </li>
+              <li>如有任何爭議，JNTO有最終決定權，所有參加者不得異議。</li>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
@@ -413,6 +421,13 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
+        $("#btn-t_and_c").click(function () {
+          $("body").addClass("overlay-active");
+        });
+        $("#close-btn, #overlay").click(function () {
+          $("body").removeClass("overlay-active");
+        });
+
         $(".slider-1, .slider-2, .slider-3").slick({
           arrows: true,
           loop: true,

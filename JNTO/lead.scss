@@ -79,7 +79,7 @@
   max-width: 1160px;
   margin: auto;
   // margin: 3vmax auto 5vmax;
-  padding: 3.5em 5em 4em;
+  padding: 3.5vmax 5vmax 4vmax;
   // padding: 3vmax 5vmax 3.5vmax;
   // padding: 3vw 4vw 3.5vw;
   text-align: center;
@@ -90,7 +90,192 @@
   @include media-568 {
     border-width: $border-width-mobile;
   }
+  .t_and_c-header {
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    @include media-568 {
+      font-size: 1em;
+    }
+  }
+  &.t_and_c {
+    top: 50%;
+    bottom: auto;
+    height: auto;
+    height: 100%;
+    padding: 0;
+    max-height: 80vh;
+    text-transform: uppercase;
+    z-index: 1001;
+    text-align: left;
+    border-color: #000;
+    // transform: translateY(-50%);
+    transform: translateY(-40%);
+    @include media-1440 {
+      max-width: 86vw;
+    }
+    .close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      // top: 1em;
+      // right: 1em;
+      z-index: 1002;
+      width: 5em;
+      height: 5em;
+      // background: #000;
+      @include media-568 {
+        width: 3em;
+        height: 3em;
+      }
+      &:after,
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 3em;
+        height: 0.5em;
+        // height: 0.25em;
+        background: #000;
+        transform-origin: center;
+        transform: rotate(45deg);
+        @include media-568 {
+          width: 2em;
+          height: 0.25em;
+        }
+      }
+      &:after {
+        transform: rotate(135deg);
+      }
+      // span {
+      //   display: block;
+      //   width: 100%;
+      //   height: 0.5em;
+      //   margin: auto;
+      //   background: lime;
+      //   transform-origin: center;
+      //   // transform: rotate(45deg);
+      //   & + span {
+      //     transform: rotate(135deg);
+      //   }
+      // }
+    }
+    .t_and_c-wrap {
+      overflow-y: scroll;
+      position: absolute;
+      top: 0;
+      // left: 0;
+      // right: 0;
+      bottom: 0;
+      padding: 3.5vmax 5vmax 4vmax;
+      // width: 100%;
+      // max-height: 80vh;
+      // height: 80vh;
+    }
+    ol {
+      // counter-reset: item;
+      // padding-left: 2.5em;
+      // list-style-position: inside;
+      li {
+        position: relative;
+        padding-left: 2em;
+        &:before {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      &.num-list {
+        // list-style-type: decimal;
+        counter-reset: num-item;
+        li {
+          &:before {
+            content: counter(num-item) ". ";
+            counter-increment: num-item;
+          }
+        }
+      }
+      &.roman-list {
+        // list-style-type: lower-roman;
+        counter-reset: item;
+        li {
+          padding-left: 2.5em;
+          // position: relative;
+          // padding-left: 2.5em;
+          &:before {
+            content: "(" counter(item, upper-roman) ")";
+            counter-increment: item;
+          }
+        }
+      }
+      // li {
+      //   &:before {
+      //     content: counter(item) ". ";
+      //     counter-increment: item;
+      //     width: 2em;
+      //     display: inline-block;
+      //   }
+      // }
+    }
+    li.red-text {
+      p,
+      li {
+        color: $J_red;
+      }
+    }
+    p,
+    li {
+      font-family: sans-serif;
+      line-height: 2rem;
+      color: #000;
+      @include media-568 {
+        font-size: 0.875rem;
+        line-height: 1.75rem;
+      }
+    }
+  }
 }
+.t_and_c,
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  // user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.overlay {
+  user-select: none;
+  overflow: hidden;
+  // background-color: lime;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+body.overlay-active {
+  user-select: none;
+  overflow: hidden;
+  .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .t_and_c {
+    opacity: 1;
+    transform: translateY(-50%);
+    pointer-events: auto;
+  }
+}
+
 @include media-1024 {
   .lead-box {
     // padding: 3vw 4vw 3.5vw;
