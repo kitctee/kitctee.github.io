@@ -421,8 +421,8 @@
 }
 
 .event-detail-wrap .btn-join .btn-text {
-  width: 12.75vmax;
-  font-size: 6vmax;
+  width: 12vmax;
+  font-size: 5.5vmax;
 }
 
 @media only screen and (max-width: 1023px) {

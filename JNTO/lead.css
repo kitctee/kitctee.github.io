@@ -8,11 +8,6 @@
   position: relative;
 }
 
-.sec-lead:hover .lead-stripe:before {
-  -webkit-animation: lead-ani 1s linear infinite;
-          animation: lead-ani 1s linear infinite;
-}
-
 .sec-lead-red {
   text-align: center;
   background-color: #e93323;
@@ -27,6 +22,10 @@
   max-width: 1160px;
   margin: auto;
   padding: 2em 0;
+}
+
+.lead-textbox p + p {
+  margin-top: 1.5em;
 }
 
 .lead-stripe {
@@ -103,6 +102,10 @@
   .lead-box {
     border-width: 4px;
   }
+}
+
+.lead-box p + p {
+  margin-top: 1.5em;
 }
 
 .lead-box .t_and_c-header {
@@ -225,11 +228,6 @@
   counter-increment: item;
 }
 
-.lead-box.t_and_c li.red-text p,
-.lead-box.t_and_c li.red-text li {
-  color: #e93323;
-}
-
 .lead-box.t_and_c p,
 .lead-box.t_and_c li {
   font-family: sans-serif;
@@ -268,7 +266,7 @@
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 body.overlay-active {

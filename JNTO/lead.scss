@@ -4,11 +4,11 @@
   display: flex;
   align-items: center;
   position: relative;
-  &:hover {
-    .lead-stripe:before {
-      animation: lead-ani 1s linear infinite;
-    }
-  }
+  // &:hover {
+  //   .lead-stripe:before {
+  //     animation: lead-ani 1s linear infinite;
+  //   }
+  // }
 }
 .sec-lead-red {
   text-align: center;
@@ -18,12 +18,15 @@
     color: #fff;
   }
 }
+
 .lead-textbox {
   max-width: 1160px;
   margin: auto;
   padding: 2em 0;
+  p + p {
+    margin-top: 1.5em;
+  }
 }
-
 .lead-stripe {
   overflow: hidden;
   position: absolute;
@@ -89,6 +92,9 @@
   box-shadow: $bs-x $bs-y $J_red;
   @include media-568 {
     border-width: $border-width-mobile;
+  }
+  p + p {
+    margin-top: 1.5em;
   }
   .t_and_c-header {
     font-size: 1.25em;
@@ -222,12 +228,12 @@
       //   }
       // }
     }
-    li.red-text {
-      p,
-      li {
-        color: $J_red;
-      }
-    }
+    // li.red-text {
+    //   p,
+    //   li {
+    //     color: $J_red;
+    //   }
+    // }
     p,
     li {
       font-family: sans-serif;
@@ -260,7 +266,7 @@
   user-select: none;
   overflow: hidden;
   // background-color: lime;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 body.overlay-active {
   user-select: none;

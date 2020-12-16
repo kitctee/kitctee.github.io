@@ -59,8 +59,28 @@ $bs-y-1024: 4vw;
     @content;
   }
 }
+@mixin media-444 {
+  @media only screen and (max-width: 444px) {
+    @content;
+  }
+}
 @mixin media-375 {
   @media only screen and (max-width: 375px) {
+    @content;
+  }
+}
+@mixin media-1024-h {
+  @media only screen and (max-height: 1024px) {
+    @content;
+  }
+}
+@mixin media-1024-h-768-w {
+  @media only screen and (max-height: 1024px) and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin media-568-h {
+  @media only screen and (max-height: 568px) and (max-width: 768px) {
     @content;
   }
 }
