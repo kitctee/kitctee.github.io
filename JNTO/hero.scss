@@ -119,7 +119,7 @@
   @include media-1024 {
     width: 75vw;
     min-width: 0;
-    max-width: 700px;
+    max-width: 580px;
     .narrow & {
       top: 8vh;
       min-width: 360px;
@@ -447,7 +447,7 @@
   // width: 50%;
   // min-width: 50vmax;
   // max-width: 560px;
-  min-width: 560px;
+  min-width: 680px;
   bottom: -7vmax;
   // height: auto;
   // height: 100%;
@@ -485,7 +485,7 @@
   z-index: 102;
   // width: 380px;
   width: 24vw;
-  min-width: 400px;
+  min-width: 560px;
 
   // height: 340px;
   // height: auto;
@@ -516,7 +516,7 @@
   // width: 200px;
   // width: 100%;
   width: 15vw;
-  min-width: 240px;
+  min-width: 340px;
   // height: 270px;
   // height: 100%;
   // background-color: royalblue;
