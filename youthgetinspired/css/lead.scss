@@ -279,6 +279,7 @@ body.overlay-active {
     opacity: 1;
     transform: translateY(-50%);
     pointer-events: auto;
+    user-select: auto;
   }
 }
 

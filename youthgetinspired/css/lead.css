@@ -287,6 +287,10 @@ body.overlay-active .t_and_c {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   pointer-events: auto;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
 
 @media only screen and (max-width: 1024px) {
