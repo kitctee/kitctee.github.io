@@ -6,10 +6,8 @@
 .action-group {
   display: flex;
   flex-direction: row;
-  // padding: 3vw 0;
   @include media-568 {
     flex-direction: column;
-    // padding: 3vw 6vw;
     padding: 0 6vw;
   }
 }
@@ -22,10 +20,8 @@
   }
   @include media-568 {
     width: 100%;
-    // padding: 3vmax 0 6vmax;
     padding: 0 0 6vmax;
     & + .action-item {
-      // padding: 6vmax 0 3vmax;
       padding: 6vmax 0 0;
       border-top: 1px solid #fff;
       border-left: none;
@@ -33,9 +29,7 @@
   }
 }
 .action-content {
-  // width: 100%;
   width: 270px;
-  // width: 20vw;
   margin: auto;
   @include media-1024 {
     width: 30vw;
@@ -46,10 +40,8 @@
 }
 .action-icon {
   display: block;
-  // width: 100px;
   height: 0;
   padding-top: 100%;
-  // background-color: $J_grey;
   background-position: center;
   background-size: contain;
   &.travel-tips {

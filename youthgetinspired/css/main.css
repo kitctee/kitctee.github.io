@@ -11,9 +11,15 @@ body {
   -ms-text-size-adjust: 100%;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-width: 1024px) {
   body {
-    -webkit-text-size-adjust: none;
+    min-width: 1024px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    min-width: 0;
   }
 }
 
@@ -97,6 +103,12 @@ section.full-sec {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  section.full-sec {
+    min-height: 0;
+  }
+}
+
 .h2,
 h2 {
   font-size: 3.5em;
@@ -109,17 +121,24 @@ h2 + p {
   margin-top: 2em;
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 1024px) {
   .h2,
   h2 {
     font-size: 3em;
   }
 }
 
-@media only screen and (max-width: 444px) {
+@media only screen and (max-width: 768px) {
   .h2,
   h2 {
     font-size: 2.75em;
+  }
+}
+
+@media only screen and (max-width: 444px) {
+  .h2,
+  h2 {
+    font-size: 2.25em;
   }
 }
 
@@ -143,10 +162,24 @@ p,
   line-height: 3;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   p,
   .p {
     line-height: 2.5;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  p,
+  .p {
+    line-height: 2;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  p,
+  .p {
+    line-height: 1.75;
   }
 }
 
@@ -186,6 +219,83 @@ img {
 
 @media only screen and (max-width: 568px) {
   .max-wrapper, .max-wrapper.large {
-    padding: 0 8vw;
+    padding: 0 6vw;
+  }
+}
+
+.icon-wrap {
+  overflow: hidden;
+  text-align: center;
+}
+
+.icon-wrap a {
+  display: block;
+  float: left;
+  width: 50px;
+  color: #e93323;
+}
+
+.icon-wrap i {
+  width: 50px;
+  font-size: 1.5em;
+  line-height: 50px;
+}
+
+.sec-header {
+  overflow: hidden;
+  padding: 1em 2em;
+}
+
+@media only screen and (max-width: 767px) {
+  .sec-header {
+    padding: 0.75em 1em;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .sec-header .icon-wrap {
+    display: none;
+  }
+}
+
+.sec-header .logo {
+  float: left;
+  width: auto;
+  height: 50px;
+}
+
+.sec-header .logo + .logo {
+  margin-left: 2em;
+}
+
+.sec-header .icon-wrap {
+  float: right;
+}
+
+.sec-footer {
+  background-color: #000;
+}
+
+.sec-footer .icon-wrap {
+  margin: 0 -0.875em;
+}
+
+.sec-footer .icon-wrap i {
+  color: #fff;
+}
+
+.sec-footer p {
+  font-size: 0.875em;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .sec-footer {
+    text-align: center;
+  }
+  .sec-footer .icon-wrap {
+    width: 150px;
+    margin: auto;
+    margin-bottom: 1em;
   }
 }

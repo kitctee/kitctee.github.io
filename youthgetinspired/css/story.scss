@@ -53,7 +53,6 @@
 .story-wrap {
   position: relative;
   margin: 3vmax auto;
-  // margin: 60px;
   width: 100%;
   max-width: 1200px;
   @include media-568 {
@@ -73,9 +72,6 @@
   margin: auto;
   border: 0px solid $J_red;
   transform: rotate(-45deg);
-  // .article-slider & {
-  //   top: calc(50% - 1.5vw - 16px);
-  // }
   @include media-568 {
     top: 100%;
     left: 0;
@@ -118,13 +114,6 @@
     }
   }
 }
-// .slick-prev:before,
-// .slick-next:before {
-// content: none;
-// font-size: 60px;
-// color: $J_red;
-// opacity: 1;
-// }
 
 .story {
   width: 100%;
@@ -148,13 +137,8 @@
     text-align: center;
     color: #fff;
   }
-  // &.story-2 {
-  // }
-  // &.story-3 {
-  // }
 }
 .article-slider {
-  // margin: 0 -1.5vw;
   .story {
     padding: 0 1.5vw;
   }

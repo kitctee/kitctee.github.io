@@ -1,8 +1,5 @@
 @import "_var";
 
-// section:not(.sec-message) {
-//   display: none;
-// }
 .sec-message {
   position: relative;
   padding-bottom: 5vmax;
@@ -17,25 +14,18 @@
   }
   &:before {
     @include pos-ab;
-    // left: auto;
-    // bottom: auto;
     z-index: -1;
-    // width: 100%;
-    // max-width: 800px;
-    // max-height: 680px;
-    // background-size: contain;
     background-size: 800px 680px;
     background-image: url("../img/bg_otera.jpg");
     background-repeat: no-repeat;
     background-position: top right;
     @include media-1024 {
-      // opacity: 0.5;
       background-size: contain;
+      background-image: url("../img/bg_otera_s.jpg");
+      opacity: 0.5;
     }
   }
   &.detail:before {
-    // max-width: 1100px;
-    // max-height: 820px;
     background-size: 1100px auto;
     @include media-1024 {
       background-size: contain;
@@ -56,9 +46,17 @@
   margin-bottom: -2em;
   padding-right: 3vw;
   @include media-1024 {
-    max-width: none;
+    max-width: 600px;
     margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2em;
+    text-align: center;
+    h2 {
+      br {
+        display: none;
+      }
+    }
   }
 }
 .event-detail-wrap {
@@ -121,6 +119,9 @@
 
 .message-board {
   position: relative;
+  @include media-767 {
+    width: 100%;
+  }
 }
 .rope-front,
 .rope-back {
@@ -150,7 +151,33 @@
 }
 
 .board-wood {
+  position: relative;
   margin-top: 15.5em;
+  // @include media-767 {
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 5.125em;
+  //     left: $border-width;
+  //     right: $border-width;
+  //     z-index: 100;
+  //     height: 2em;
+  //     // border: 1px solid lime;
+  //     background-color: lime;
+  //     background: rgb(255, 255, 255);
+  //     background: linear-gradient(
+  //       0deg,
+  //       rgba(255, 255, 255, 0) 0%,
+  //       rgba(255, 255, 255, 1) 100%
+  //     );
+  //   }
+  // }
+  // @include media-568 {
+  //   &::before {
+  //     left: $border-width-mobile;
+  //     right: $border-width-mobile;
+  //   }
+  // }
 }
 .board-top {
   pointer-events: none;
@@ -204,20 +231,27 @@
     margin-top: -12vw;
     margin-bottom: 6vmax;
   }
+  @include media-767 {
+    overflow-y: scroll;
+    max-height: 500px;
+    text-align: left;
+    // padding-top: 1em;
+    padding-top: 0;
+    .profile {
+      text-align: center;
+    }
+  }
   @include media-568 {
     margin-top: -15vw;
     border-width: $border-width-mobile;
   }
   li {
-    // overflow: hidden;
     position: relative;
     display: inline-block;
     margin: 0 0.5em 2em;
-    // margin-bottom: 2em;
     padding: 0 0.5em;
     font-family: sans-serif;
     font-size: 1em;
-    // border: 1px solid lime;
     padding-left: 3em;
     &:nth-child(2n) {
       .profile {
@@ -228,6 +262,9 @@
       .profile {
         background-color: $J-blue;
       }
+    }
+    @include media-767 {
+      display: block;
     }
   }
   .profile {
@@ -255,13 +292,22 @@
   z-index: 999;
   margin-top: 4em;
   margin-left: -1em;
-  // outline: 1px solid lime;
+  @include media-1024 {
+    margin-left: auto;
+  }
+  @include media-767 {
+    margin-top: 3em;
+  }
   .event-detail-wrap & {
     margin-top: auto;
     margin-left: auto;
-    @include media-1023 {
-      margin-left: -1em;
+    @include media-1024 {
+      margin-left: auto;
+      margin-right: auto;
     }
+    // @include media-1023 {
+    //   margin-left: -1em;
+    // }
   }
 }
 .btn-t_and_c {
@@ -284,6 +330,9 @@
   height: 180px;
   border: 4px solid #fff;
   border-radius: 50%;
+  @include media-1024 {
+    margin: auto;
+  }
   &:before {
     transition: 1s linear;
     content: "";
@@ -315,12 +364,9 @@
     margin: auto;
     font-size: 2.75em;
     line-height: 0.9;
-    // text-align: left;
     color: #fff;
   }
   .event-detail-wrap & {
-    // width: 340px;
-    // height: 340px;
     width: 20vmax;
     height: 20vmax;
     &::before {
@@ -335,12 +381,9 @@
         $J_red 100%
       );
       background-size: 20px;
-      // background-size: 1vw;
       transform: rotate(-60deg);
     }
     .btn-text {
-      // width: 210px;
-      // font-size: 6em;
       width: 12vmax;
       font-size: 5.5vmax;
     }

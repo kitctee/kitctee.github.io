@@ -35,6 +35,8 @@
 @media only screen and (max-width: 1024px) {
   .sec-message:before {
     background-size: contain;
+    background-image: url("../img/bg_otera_s.jpg");
+    opacity: 0.5;
   }
 }
 
@@ -72,9 +74,15 @@
 
 @media only screen and (max-width: 1024px) {
   .message-text {
-    max-width: none;
+    max-width: 600px;
     margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2em;
+    text-align: center;
+  }
+  .message-text h2 br {
+    display: none;
   }
 }
 
@@ -161,6 +169,12 @@
   position: relative;
 }
 
+@media only screen and (max-width: 767px) {
+  .message-board {
+    width: 100%;
+  }
+}
+
 .rope-front,
 .rope-back {
   pointer-events: none;
@@ -198,6 +212,7 @@
 }
 
 .board-wood {
+  position: relative;
   margin-top: 15.5em;
 }
 
@@ -278,6 +293,18 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .message-con {
+    overflow-y: scroll;
+    max-height: 500px;
+    text-align: left;
+    padding-top: 0;
+  }
+  .message-con .profile {
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 568px) {
   .message-con {
     margin-top: -15vw;
@@ -301,6 +328,12 @@
 
 .message-con li:nth-child(3n) .profile {
   background-color: #335690;
+}
+
+@media only screen and (max-width: 767px) {
+  .message-con li {
+    display: block;
+  }
 }
 
 .message-con .profile {
@@ -336,14 +369,27 @@
   margin-left: -1em;
 }
 
+@media only screen and (max-width: 1024px) {
+  .btn-join-wrap {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-join-wrap {
+    margin-top: 3em;
+  }
+}
+
 .event-detail-wrap .btn-join-wrap {
   margin-top: auto;
   margin-left: auto;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .event-detail-wrap .btn-join-wrap {
-    margin-left: -1em;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -376,6 +422,12 @@
   height: 180px;
   border: 4px solid #fff;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .btn-join {
+    margin: auto;
+  }
 }
 
 .btn-join:before {
