@@ -87,10 +87,6 @@ section {
   padding: 3vmax 0;
 }
 
-section.full-sec {
-  min-height: 100vh;
-}
-
 @media only screen and (max-width: 1440px) {
   section {
     padding: 4vmax 0;
@@ -100,12 +96,6 @@ section.full-sec {
 @media only screen and (max-width: 1024px) {
   section {
     padding: 6vmax 0;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  section.full-sec {
-    min-height: 0;
   }
 }
 

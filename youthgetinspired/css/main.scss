@@ -75,20 +75,23 @@ section {
   overflow: hidden;
   display: block;
   padding: 3vmax 0;
-  &.full-sec {
-    min-height: 100vh;
-  }
+  // &.full-sec {
+  //   min-height: 100vh;
+  // }
   @include media-1440 {
     padding: 4vmax 0;
+    // &.full-sec {
+    //   min-height: 0;
+    // }
   }
   @include media-1024 {
     padding: 6vmax 0;
   }
-  @include media-1023 {
-    &.full-sec {
-      min-height: 0;
-    }
-  }
+  // @include media-1023 {
+  //   &.full-sec {
+  //     min-height: 0;
+  //   }
+  // }
 }
 .h2,
 h2 {
