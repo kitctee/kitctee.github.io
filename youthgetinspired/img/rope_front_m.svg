@@ -17,15 +17,8 @@
 <mask maskUnits="userSpaceOnUse" x="4.5" y="0" width="247" height="333" id="SVGID_1_">
 	<g class="st0">
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="140" y1="340" x2="140" y2="-9.094947e-13">
-			<stop  offset="0.7" style="stop-color:#FFFFFF"/>
-			<stop  offset="0.7331" style="stop-color:#CBCBCB"/>
-			<stop  offset="0.7717" style="stop-color:#969696"/>
-			<stop  offset="0.8109" style="stop-color:#686868"/>
-			<stop  offset="0.8497" style="stop-color:#434343"/>
-			<stop  offset="0.8883" style="stop-color:#252525"/>
-			<stop  offset="0.9264" style="stop-color:#111111"/>
-			<stop  offset="0.9639" style="stop-color:#040404"/>
-			<stop  offset="1" style="stop-color:#000000"/>
+			<stop  offset="0.4" style="stop-color:#FFFFFF"/>
+			<stop  offset="0.6" style="stop-color:#000000"/>
 		</linearGradient>
 		<rect class="st1" width="280" height="340"/>
 	</g>

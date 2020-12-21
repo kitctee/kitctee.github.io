@@ -10,14 +10,14 @@ body {
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: 100%;
   @include media-1024 {
-    // &.non-mobile {
-    min-width: 1024px;
-    // }
+    &.non-mobile {
+      min-width: 1024px;
+    }
   }
   @include media-768 {
-    // &.non-mobile {
-    min-width: 0;
-    // }
+    &.non-mobile {
+      min-width: 0;
+    }
   }
 }
 // @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -78,12 +78,12 @@ section {
   // &.full-sec {
   //   min-height: 100vh;
   // }
-  @include media-1440 {
-    padding: 4vmax 0;
-    // &.full-sec {
-    //   min-height: 0;
-    // }
-  }
+  // @include media-1440 {
+  //   padding: 4vmax 0;
+  //   // &.full-sec {
+  //   //   min-height: 0;
+  //   // }
+  // }
   @include media-1024 {
     padding: 6vmax 0;
   }
@@ -106,15 +106,22 @@ h2 {
   }
   @include media-768 {
     font-size: 2.75em;
+    + p {
+      margin-top: 1.5em;
+    }
   }
   @include media-444 {
     font-size: 2.25em;
+    + p {
+      margin-top: 1em;
+    }
   }
 }
 h3,
 .h3 {
   font-size: 2.25em;
   font-weight: bold;
+  line-height: 1.2;
   text-transform: uppercase;
   @include media-768 {
     font-size: 2em;
@@ -188,18 +195,13 @@ img {
     line-height: 50px;
   }
 }
-
 .sec-header {
   overflow: hidden;
   padding: 1em 2em;
-  @include media-767 {
-    padding: 0.75em 1em;
-  }
-  @include media-568 {
-    .icon-wrap {
-      display: none;
-    }
-  }
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  background-color: #fff;
   .logo {
     float: left;
     width: auto;
@@ -208,13 +210,41 @@ img {
       margin-left: 2em;
     }
   }
-  .jnto {
-  }
-  .jed {
-  }
+  // .jnto {
+  // }
+  // .jed {
+  // }
   .icon-wrap {
     float: right;
   }
+  @include media-1024 {
+    padding: 0.75em 1em;
+  }
+  @include media-767 {
+    padding: 0.5em 1em;
+    a {
+      width: 28px;
+      & + a {
+        margin-left: 0.5em;
+      }
+    }
+    i {
+      width: 28px;
+      font-size: 1em;
+      line-height: 28px;
+    }
+    .logo {
+      height: 28px;
+      & + .logo {
+        margin-left: 1em;
+      }
+    }
+  }
+  // @include media-568 {
+  //   .icon-wrap {
+  //     display: none;
+  //   }
+  // }
 }
 .sec-footer {
   background-color: #000;

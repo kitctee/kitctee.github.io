@@ -12,13 +12,13 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
-  body {
+  body.non-mobile {
     min-width: 1024px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  body {
+  body.non-mobile {
     min-width: 0;
   }
 }
@@ -87,12 +87,6 @@ section {
   padding: 3vmax 0;
 }
 
-@media only screen and (max-width: 1440px) {
-  section {
-    padding: 4vmax 0;
-  }
-}
-
 @media only screen and (max-width: 1024px) {
   section {
     padding: 6vmax 0;
@@ -123,6 +117,10 @@ h2 + p {
   h2 {
     font-size: 2.75em;
   }
+  .h2 + p,
+  h2 + p {
+    margin-top: 1.5em;
+  }
 }
 
 @media only screen and (max-width: 444px) {
@@ -130,12 +128,17 @@ h2 + p {
   h2 {
     font-size: 2.25em;
   }
+  .h2 + p,
+  h2 + p {
+    margin-top: 1em;
+  }
 }
 
 h3,
 .h3 {
   font-size: 2.25em;
   font-weight: bold;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -241,18 +244,11 @@ img {
 .sec-header {
   overflow: hidden;
   padding: 1em 2em;
-}
-
-@media only screen and (max-width: 767px) {
-  .sec-header {
-    padding: 0.75em 1em;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .sec-header .icon-wrap {
-    display: none;
-  }
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  background-color: #fff;
 }
 
 .sec-header .logo {
@@ -267,6 +263,35 @@ img {
 
 .sec-header .icon-wrap {
   float: right;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sec-header {
+    padding: 0.75em 1em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .sec-header {
+    padding: 0.5em 1em;
+  }
+  .sec-header a {
+    width: 28px;
+  }
+  .sec-header a + a {
+    margin-left: 0.5em;
+  }
+  .sec-header i {
+    width: 28px;
+    font-size: 1em;
+    line-height: 28px;
+  }
+  .sec-header .logo {
+    height: 28px;
+  }
+  .sec-header .logo + .logo {
+    margin-left: 1em;
+  }
 }
 
 .sec-footer {

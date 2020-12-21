@@ -19,7 +19,7 @@
   margin: auto;
   padding: 2em 0;
   p + p {
-    margin-top: 1.5em;
+    margin-top: 0.75em;
   }
 }
 .lead-stripe {
@@ -88,14 +88,15 @@
     box-shadow: $bs-x-1024 $bs-y-1024 $J_red;
   }
   @include media-768 {
-    padding: 3vmax 3vmax 3.5vmax;
+    padding: 3vmax 4vmax 3.5vmax;
     border-width: $border-width-mobile;
   }
   @include media-568 {
+    padding: 3vmax 3vmax 3.5vmax;
     margin: auto;
   }
   p + p {
-    margin-top: 1.5em;
+    margin-top: 0.75em;
   }
   .t_and_c-header {
     font-size: 1.25em;

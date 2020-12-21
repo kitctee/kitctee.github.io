@@ -25,7 +25,7 @@
 }
 
 .lead-textbox p + p {
-  margin-top: 1.5em;
+  margin-top: 0.75em;
 }
 
 .lead-stripe {
@@ -108,19 +108,20 @@
 
 @media only screen and (max-width: 768px) {
   .lead-box {
-    padding: 3vmax 3vmax 3.5vmax;
+    padding: 3vmax 4vmax 3.5vmax;
     border-width: 4px;
   }
 }
 
 @media only screen and (max-width: 568px) {
   .lead-box {
+    padding: 3vmax 3vmax 3.5vmax;
     margin: auto;
   }
 }
 
 .lead-box p + p {
-  margin-top: 1.5em;
+  margin-top: 0.75em;
 }
 
 .lead-box .t_and_c-header {
