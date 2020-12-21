@@ -524,10 +524,10 @@
 
           return window.matchMedia(queries.join(",")).matches;
         }
-        if (is_touch_device4) {
-          $("body").addClass("non-touch");
-        } else {
+        if (is_touch_device4()) {
           $("body").addClass("touch");
+        } else {
+          $("body").addClass("non-touch");
         }
 
         $("#btn-t_and_c").click(function () {

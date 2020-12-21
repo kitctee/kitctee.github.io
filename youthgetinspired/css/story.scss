@@ -137,9 +137,24 @@
     text-align: center;
     color: #fff;
   }
+  .non-touch & {
+    .video-title {
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+    .imgbox:hover {
+      .video-title {
+        opacity: 1;
+      }
+    }
+  }
 }
 .article-slider {
   .story {
     padding: 0 1.5vw;
   }
 }
+
+// body.non-touch {
+//   border: 10px solid lime;
+// }
