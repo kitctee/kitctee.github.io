@@ -67,27 +67,38 @@
 .slick-next {
   top: 0;
   bottom: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin: auto;
   border: 0px solid $J_red;
   transform: rotate(-45deg);
+  &::before,
+  &::after {
+    color: transparent;
+  }
+  @include media-1023 {
+    width: 2rem;
+    height: 2rem;
+  }
   @include media-568 {
     top: 100%;
     left: 0;
     right: 0;
     bottom: auto;
-    width: 2rem;
-    height: 2rem;
+    // width: 2rem;
+    // height: 2rem;
     margin-top: 4rem;
   }
 }
 .slick-prev {
-  left: -7vw;
+  left: -5vw;
   border-top-width: $border-width;
   border-left-width: $border-width;
   .article-slider & {
     left: -3vw;
+    @include media-1024 {
+      left: -4vw;
+    }
   }
   @include media-568 {
     &,
@@ -99,11 +110,14 @@
   }
 }
 .slick-next {
-  right: -7vw;
+  right: -5vw;
   border-right-width: $border-width;
   border-bottom-width: $border-width;
   .article-slider & {
     right: -3vw;
+    @include media-1024 {
+      right: -4vw;
+    }
   }
   @include media-568 {
     &,

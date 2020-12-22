@@ -81,12 +81,26 @@
 .slick-next {
   top: 0;
   bottom: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin: auto;
   border: 0px solid #e93323;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.slick-prev::before, .slick-prev::after,
+.slick-next::before,
+.slick-next::after {
+  color: transparent;
+}
+
+@media only screen and (max-width: 1023px) {
+  .slick-prev,
+  .slick-next {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -96,20 +110,24 @@
     left: 0;
     right: 0;
     bottom: auto;
-    width: 2rem;
-    height: 2rem;
     margin-top: 4rem;
   }
 }
 
 .slick-prev {
-  left: -7vw;
+  left: -5vw;
   border-top-width: 9px;
   border-left-width: 9px;
 }
 
 .article-slider .slick-prev {
   left: -3vw;
+}
+
+@media only screen and (max-width: 1024px) {
+  .article-slider .slick-prev {
+    left: -4vw;
+  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -122,13 +140,19 @@
 }
 
 .slick-next {
-  right: -7vw;
+  right: -5vw;
   border-right-width: 9px;
   border-bottom-width: 9px;
 }
 
 .article-slider .slick-next {
   right: -3vw;
+}
+
+@media only screen and (max-width: 1024px) {
+  .article-slider .slick-next {
+    right: -4vw;
+  }
 }
 
 @media only screen and (max-width: 568px) {
