@@ -26,11 +26,16 @@
   background-position: top right;
 }
 
+@media only screen and (max-width: 1440px) {
+  .sec-message:before {
+    opacity: 0.5;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .sec-message:before {
     background-size: contain;
     background-image: url("../img/bg_otera_s.jpg");
-    opacity: 0.5;
   }
 }
 
@@ -84,6 +89,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-top: 2em;
   padding-bottom: 6vw;
 }
 
@@ -98,7 +104,8 @@
 
 @media only screen and (max-width: 768px) {
   .event-detail-wrap {
-    padding: 0 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 

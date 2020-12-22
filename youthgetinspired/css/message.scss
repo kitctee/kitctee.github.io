@@ -21,10 +21,12 @@
     background-image: url("../img/bg_otera.jpg");
     background-repeat: no-repeat;
     background-position: top right;
+    @include media-1440 {
+      opacity: 0.5;
+    }
     @include media-1024 {
       background-size: contain;
       background-image: url("../img/bg_otera_s.jpg");
-      opacity: 0.5;
     }
   }
   &.detail:before {
@@ -63,12 +65,17 @@
 }
 .event-detail-wrap {
   align-items: flex-start;
+  // padding-top: 3vw;
+  padding-top: 2em;
   padding-bottom: 6vw;
+  // @include media-1024 {
+  // }
   @include media-1023 {
     flex-direction: column;
   }
   @include media-768 {
-    padding: 0 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 .event-detail {
