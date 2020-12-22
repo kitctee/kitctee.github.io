@@ -96,6 +96,12 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .event-detail-wrap {
+    padding: 0 1em;
+  }
+}
+
 .event-detail {
   width: 50%;
   max-width: 500px;

@@ -67,6 +67,9 @@
   @include media-1023 {
     flex-direction: column;
   }
+  @include media-768 {
+    padding: 0 1em;
+  }
 }
 .event-detail {
   width: 50%;
