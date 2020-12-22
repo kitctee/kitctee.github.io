@@ -37,6 +37,7 @@
   position: absolute;
   top: -15%;
   left: 85%;
+  z-index: 3;
   width: 30vw;
   height: 30vw;
   min-width: 308px;
@@ -154,7 +155,7 @@
 .l1_r1 {
   right: 2%;
   bottom: 16%;
-  z-index: 4;
+  z-index: 5;
   width: 20vw;
   min-width: 205px;
   .narrow & {
@@ -176,7 +177,7 @@
 .l1_r2 {
   left: 84%;
   bottom: 0;
-  z-index: 5;
+  z-index: 6;
   width: 20vw;
   min-width: 205px;
   @include media-768 {
@@ -192,7 +193,7 @@
 .l2_rt {
   right: 2%;
   bottom: 36%;
-  z-index: 1;
+  z-index: 4;
   width: 30vw;
   min-width: 308px;
   .narrow & {

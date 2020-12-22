@@ -102,14 +102,14 @@
         />
         <img
           class="l2_l kv-m-hide"
-          src="img/l2_l.png"
+          src="img/l2_l.jpg"
           data-aos="fade-up"
           data-aos-delay="700"
           data-aos-duration="600"
         />
         <img
           class="l2_r kv-m-hide"
-          src="img/l2_r.png"
+          src="img/l2_r.jpg"
           data-aos="fade-up"
           data-aos-delay="800"
           data-aos-duration="600"
@@ -290,80 +290,7 @@
                 <div class="j-flex inner-rect left"></div>
                 <div class="j-flex inner-rect right"></div>
               </div>
-              <ul class="message-con">
-                <li>
-                  <span class="profile">S</span
-                  ><span class="text">再去到日本，我一定要去京都初詣</span>
-                </li>
-                <li>
-                  <span class="profile">Q</span
-                  ><span class="text">同男朋友爬富士山睇日出</span>
-                </li>
-                <li>
-                  <span class="profile">E</span
-                  ><span class="text">同囡囡去沖繩滑草~</span>
-                </li>
-                <li>
-                  <span class="profile">A</span
-                  ><span class="text">下北沢shopping買衫~</span>
-                </li>
-                <li>
-                  <span class="profile">G</span
-                  ><span class="text">去貓島吸貓～~</span>
-                </li>
-                <li>
-                  <span class="profile">N</span
-                  ><span class="text">食晒拉麵四天王!!!</span>
-                </li>
-                <li>
-                  <span class="profile">S</span
-                  ><span class="text">再去到日本，我一定要去京都初詣</span>
-                </li>
-                <li>
-                  <span class="profile">Q</span
-                  ><span class="text">同男朋友爬富士山睇日出</span>
-                </li>
-                <li>
-                  <span class="profile">E</span
-                  ><span class="text">同囡囡去沖繩滑草~</span>
-                </li>
-                <li>
-                  <span class="profile">A</span
-                  ><span class="text">下北沢shopping買衫~</span>
-                </li>
-                <li>
-                  <span class="profile">G</span
-                  ><span class="text">去貓島吸貓～~</span>
-                </li>
-                <li>
-                  <span class="profile">N</span
-                  ><span class="text">食晒拉麵四天王!!!</span>
-                </li>
-                <li>
-                  <span class="profile">S</span
-                  ><span class="text">再去到日本，我一定要去京都初詣</span>
-                </li>
-                <li>
-                  <span class="profile">Q</span
-                  ><span class="text">同男朋友爬富士山睇日出</span>
-                </li>
-                <li>
-                  <span class="profile">E</span
-                  ><span class="text">同囡囡去沖繩滑草~</span>
-                </li>
-                <li>
-                  <span class="profile">A</span
-                  ><span class="text">下北沢shopping買衫~</span>
-                </li>
-                <li>
-                  <span class="profile">G</span
-                  ><span class="text">去貓島吸貓～~</span>
-                </li>
-                <li>
-                  <span class="profile">N</span
-                  ><span class="text">食晒拉麵四天王!!!</span>
-                </li>
-              </ul>
+              <ul class="message-con" id="messageCon"></ul>
             </div>
           </div>
         </div>
@@ -382,7 +309,7 @@
                 所有參加者必須同意參與活動並遵守活動條款及細則。在得到參加者的同意下，JNTO會使用參加者所提供的個人資料作市場推廣及宣傳用途。
               </li>
               <li>
-                活動時間為2020年12月22日至2021年1月24日23時59分（香港時間），以JNTO之伺服器為準。
+                活動時間為2020年12月23日至2021年1月24日23時59分（香港時間），以JNTO之伺服器為準。
               </li>
               <li>參加者須年滿十八歲及持有有效香港永久性居民身份證。</li>
               <li class="red-text">
@@ -407,8 +334,9 @@
                 的內容必須與日本旅遊有關，JNTO會選出入圍作品並上載至專頁內，如有任何爭議，JNTO有最終決定權，所有參加者不得異議。
               </li>
               <li>
-                奬品活動方便，JNTO將選出最有心思的16位參加者得獎。獎品設頭獎（1名）、二獎（5名）及三獎（10名），分別如下：<br />　頭獎：豪華日式雙人鐡板燒套餐 (價值約$3,500，名額一名)<br />　二獎：Don
-                Don Donki 購物禮券 (價值$500，名額五名)<br />　三奬：日式甜品禮券
+                奬品活動方便，JNTO將選出最有心思的16位參加者得獎。獎品設頭獎（1名）、二獎（5名）及三獎（10名），分別如下：<br />　頭獎：豪華日式雙人鐡板燒套餐
+                (價值約$3,500，名額一名)<br />　二獎：Don Don Donki 購物禮券
+                (價值$500，名額五名)<br />　三奬：日式甜品禮券
                 (價值$210，名額十名)
               </li>
               <li>所有獎品不得退換或兌換現金，不得轉換或轉售他人。</li>
@@ -492,6 +420,7 @@
         duration: 400,
         easing: "ease-out",
       });
+
       $(document).ready(function () {
         if (
           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -530,19 +459,34 @@
         });
 
         $(".story-wrap").slick({
-          // centerMode: true,
-          // centerPadding: "60px",
-          // dots: true,
           arrows: true,
-
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-
-          // variableWidth: true,
-          // variableHeight: true,
         });
       });
     </script>
+    <!-- Message Board -->
+    <script>
+      function displayContent(json) {
+        var string = "";
+        var len = json.feed.entry.length;
+        for (var i = 0; i < len; i++) {
+          var profile = json.feed.entry[i].gsx$profile.$t;
+          var message = json.feed.entry[i].gsx$message.$t;
+          string +=
+            '<li><span class="profile hi">' +
+            profile +
+            '</span><span class="text">' +
+            message +
+            "</span></li>";
+        }
+        $(string).appendTo("#messageCon");
+      }
+    </script>
+    <script
+      src="https://spreadsheets.google.com/feeds/list/12AAqrdwTnCIT6eLgVXDEY5ZGMVdtd5jChNWyHlh8nyY/od6/public/values?alt=json-in-script&amp;callback=displayContent"
+      type="text/javascript"
+    ></script>
   </body>
 </html>
