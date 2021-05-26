@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" manifest="live-cache.appcache">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="" />
+  <meta name="description" content="熱血製造，最強頻道">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1, user-scalable=no" />
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#000000">
+
+  <title>熱血時報｜直播室</title>
+
+  <link rel="stylesheet" href="css/pt-icon.css">
+  <!--[if lt IE 8]><!-->
+  <link rel="stylesheet" href="ie7/ie7.css">
+  <!--<![endif]-->
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!--set a web app capable website-->
+  <meta name="apple-mobile-web-app-title" content="熱血直播室">
+  <meta name="application-name" content="熱血直播室">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/live.css">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'></head>
+
+<body>
+  <!--[if lt IE 8]>
+<div class="browserupgrade" id="browserupgrade">
+  <div class="maxWrapper">
+    <p>文化抗共第一步：選用一個<a href="http://browsehappy.com/">合適的瀏覽器</a>
+      <br> You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+      <br>
+      <a class="browserIcon" href="http://browsehappy.com/">
+        <i class="pt-chrome inline"></i>
+        <i class="pt-safari inline"></i>
+        <i class="pt-firefox inline"></i>
+        <i class="pt-opera inline"></i>
+      </a>
+    </p>
+    <button class="default white xlBtn self" id="iLoveIE">不要說了！</button>
+  </div>
+</div>
+  <![endif]-->
+  <div class="bodyContainer">
+    <div class="liveContainer" id="liveContainer">
+
+      <header>
+        <div class="live-header">
+          <button class="mBtn progToggle2" id="progToggle2"><i class="pt-right inline"></i>節目表</button>
+          <button class="mBtn chatToggle2" id="chatToggle2">傾天室<i class="pt-left inline right"></i></button>
+          <div class="live-brand">
+            <a href="index.html" alt="熱血時報">
+              <div class="live-brand-logo"></div>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="liveWrap">
+        <div class="liveInner">
+
+          <div class="live-bannerAd ad680"><img src="img/ad-s.jpg" /></div>
+          <div class="videoCon">
+            <div class="videoWrapper video">
+              <div class="audio-live"><i class="pt-headphone inline self"></i><span>聲音直播</span></div>
+              <audio controls>
+                <source src="morning20151029d.mp3" type="audio/mp3">Your browser does not support the audio element.
+              </audio>
+              <iframe src="http://new.livestream.com/accounts/2682576/events/1857932/player?width=640&amp;height=360&amp;autoPlay=true&amp;mute=false" width="640" height="360" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+
+          <div class="chatVoteConM" id="chatVoteConM">
+            <div class="chatVoteCon" id="chatVoteCon">
+              <div class="chatVoteWrap">
+                <a href="index.html">
+                  <div class="mobile-logo"></div>
+                </a>
+                <i class="pt-arrow-up self expandBtn" id="expandToggle"></i>
+                <div class="chatVoteToggle">
+                  <button class="default active" id="chatVoteBtn1">傾天室</button>
+                  <button class="default" id="chatVoteBtn2">公投</button>
+                  <button class="default" id="chatVoteBtn3">更多</button>
+                </div>
+                <div class="chatVoteTab">
+                  <div class="videoSetting" id="videoSetting">
+                    <h5 class="liveCount">在線人數：20467</h5>
+                    <button class="default white mBtn progToggle-mobile" id="progToggle">節目表</button>
+                    <button class="default white mBtn">顯示彈幕</button>
+                    <button class="default white mBtn">聲音直播</button>
+                    <button class="default white mBtn liveThemeToggle" id="liveThemeToggle">黑介面</button>
+                  </div>
+                  <div class="live-bannerAd ad680"><img src="img/ad-s.jpg" /></div>
+                  <div class="vote" id="vote">
+                    <h4>電子公投：今晚中秋玩咩好?</h4>
+                    <div class="voteResult">
+                      <h5>水炮: 25 (39.68%)</h5>
+                      <div class="resultRow r1"></div>
+                      <h5>滴蠟: 24 (38.1%)</h5>
+                      <div class="resultRow r2"></div>
+                      <h5>煲蠟: 14 (22.22%)</h5>
+                      <div class="resultRow r3"></div>
+                    </div>
+                  </div>
+                  <div class="vote" id="vote">
+                    <h4>已投票</h4>
+                    <div class="btnCon">
+                      <button class="default yellow sBtn">反悔</button>
+                    </div>
+                  </div>
+                  <div class="vote" id="vote">
+                    <h4>電子公投：今晚中秋玩咩好?</h4>
+                    <div class="radio-con">
+                      <label class="radio">
+                        <input type="radio" name="vote" value="水炮" checked><span class="radio"></span>水炮</label>
+                      <label class="radio">
+                        <input type="radio" name="vote" value="滴蠟"><span class="radio"></span>滴蠟</label>
+                      <label class="radio">
+                        <input type="radio" name="vote" value="煲蠟"><span class="radio"></span>煲蠟</label>
+                    </div>
+                    <div class="btnCon">
+                      <button class="default yellow sBtn">投票</button>
+                    </div>
+                  </div>
+                  <footer class="liveFooter" id="liveFooter">
+                    <div class="footer-followUs live">
+                      <div class="maxWrapper large">
+                        <div class="shareCon"><a href="#"><i class="pt-facebook"></i></a></div>
+                        <div class="shareCon"><a href="#"><i class="pt-twitter"></i></a></div>
+                        <div class="shareCon"><a href="#"><i class="pt-google-plus"></i></a></div>
+                        <div class="shareCon"><a href="#"><i class="pt-youtube"></i></a></div>
+                        <div class="shareCon"><a href="#"><i class="pt-podcast"></i></a></div>
+                      </div>
+                    </div>
+                    <div class="brandInfo">
+                      <h5><a href="#">關於我們</a>｜<a href="#">免責聲明</a>｜<a href="#">隱私政策</a>｜<a href="#">聯絡我們</a>｜<a href="#">常見問題</a></h5>
+                      <h5>Copyright&copy; 2015 Passion Times Ltd. All Rights Reserved.</h5>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="progContainer hide" id="progContainer">
+      <div class="progWrap">
+        <div class="statusCon">
+          <h4 class="progHeader"><i class="pt-live2 inline"></i>直播中</h4>
+        </div>
+        <div class="progContentCon">
+          <div class="progContent">
+            <div class="nowPlaying">
+              <div class="imgBox">
+                <a href="#"><img src="img/prog-th-51.png" /></a>
+              </div>
+              <div class="textBox">
+                <div class="prog-title"><a href="#">笑死朕</a></div>
+                <div class="prog-btn">
+                 <ul>
+                   <li><a href="#"><i class="pt-prog"></i></a></li>
+                   <li><a href="#"><i class="pt-facebook"></i></a></li>
+                   <li><a href="#"><i class="pt-podcast"></i></a></li>
+                 </ul>
+                </div>
+<!--                <div class="prog-abstract">一個打算以「搞笑」拯救世界的節目。</div>-->
+                <div class="prog-abstract">政治代理人歸邊、主流傳媒自我審查，今天港人再難尋為港人、本土利益發聲的傳媒。與其從爛蘋果和毒蘋果之間取捨，不如走出來種自己的蘋果，實踐自己的夢想。熱血政治，本土起義。</div>
+              </div>
+            </div>
+            <div class="live-channel">
+              <div class="live-channel-content">
+                <h4><i class="pt-live2 inline"></i>熱血二台</h4>
+                <p>宅文化研究：P&amp;D乜乜乜降臨D乜乜乜降臨</p>
+                <button class="default sBtn yellow self fluid">轉台</button>
+                <button class="switchClose"><i class="pt-cross"></i></button>
+              </div>
+            </div>
+            <div class="progTable day5" id="progTable">
+              <div class="utilityMenu">
+                <ul>
+                  <li id="prog-day7">日</li>
+                  <li id="prog-day1">一</li>
+                  <li id="prog-day2">二</li>
+                  <li id="prog-day3">三</li>
+                  <li id="prog-day4">四</li>
+                  <li id="prog-day5">五</li>
+                  <li id="prog-day6">六</li>
+                </ul>
+              </div>
+              <ul class="vAlign">
+                <li class="media items d1">
+                  <a href="/?view=prog85">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog85"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>08:00–10:00</h6>
+                  </div>
+                </li>
+                <li class="media items d1">
+                  <a href="/?view=prog83">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog83"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>20:00–21:00</h6>
+                  </div>
+                </li>
+                <li class="media items d1">
+                  <a href="/?view=prog7">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog7"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>21:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d1">
+                  <a href="/?view=prog12">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog12"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>22:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d1">
+                  <a href="/?view=prog13">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog13"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>23:00–00:00</h6>
+                  </div>
+                </li>
+                <li class="media items d2">
+                  <a href="/?view=prog85">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog85"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>08:00–10:00</h6>
+                  </div>
+                </li>
+                <li class="media items d2">
+                  <a href="/?view=prog83">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog83"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>20:00–21:00</h6>
+                  </div>
+                </li>
+                <li class="media items d2">
+                  <a href="/?view=prog2">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog2"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>21:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d2">
+                  <a href="/?view=prog23">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog23"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>22:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d2">
+                  <a href="/?view=prog21">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog21"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>23:00–00:00</h6>
+                  </div>
+                </li>
+                <li class="media items d3">
+                  <a href="/?view=prog85">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog85"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>08:00–10:00</h6>
+                  </div>
+                </li>
+                <li class="media items d3">
+                  <a href="/?view=prog83">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog83"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>20:00–21:00</h6>
+                  </div>
+                </li>
+                <li class="media items d3">
+                  <a href="/?view=prog35">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog35"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>21:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d3">
+                  <a href="/?view=prog33">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog33"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>22:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d3">
+                  <a href="/?view=prog34">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog34"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>23:00–00:00</h6>
+                  </div>
+                </li>
+                <li class="media items d3">
+                  <a href="/?view=prog36">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog36"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>00:00–01:00</h6>
+                  </div>
+                </li>
+                <li class="media items d4">
+                  <a href="/?view=prog85">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog85"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>08:00–10:00</h6>
+                  </div>
+                </li>
+                <li class="media items d4">
+                  <a href="/?view=prog83">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog83"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>20:00–21:00</h6>
+                  </div>
+                </li>
+                <li class="media items d4">
+                  <a href="/?view=prog43">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog43"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>21:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d4">
+                  <a href="/?view=prog14">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog14"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>22:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d4">
+                  <a href="/?view=prog4">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog4"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>23:00–00:00</h6>
+                  </div>
+                </li>
+                <li class="media items d5">
+                  <a href="/?view=prog85">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog85"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>08:00–10:00</h6>
+                  </div>
+                </li>
+                <li class="media items d5">
+                  <a href="/?view=prog83">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog83"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>20:00–21:00</h6>
+                  </div>
+                </li>
+                <li class="media items d5">
+                  <a href="/?view=prog5">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog5"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>21:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d5">
+                  <a href="/?view=prog51">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog51"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>22:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d5">
+                  <a href="/?view=prog54">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog54"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>23:00–00:00</h6>
+                  </div>
+                </li>
+                <li class="media items d6">
+                  <a href="/?view=prog62">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog62"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>21:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d6">
+                  <a href="/?view=prog61">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog61"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>22:00–23:00</h6>
+                  </div>
+                </li>
+                <li class="media items d6">
+                  <a href="/?view=prog21">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog21"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>23:00–00:00</h6>
+                  </div>
+                </li>
+                <li class="media items d7">
+                  <a href="/?view=prog72">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog72"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>20:00–21:00</h6>
+                  </div>
+                </li>
+                <li class="media items d7">
+                  <a href="/?view=prog15">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog15"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>21:00–22:00</h6>
+                  </div>
+                </li>
+                <li class="media items d7">
+                  <a href="/?view=prog1">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog1"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>22:00–23:30</h6>
+                  </div>
+                </li>
+                <li class="media items d7">
+                  <a href="/?view=prog73">
+                    <div class="imgBox"></div>
+                  </a>
+                  <div class="textBox">
+                    <h4><a href="/?view=prog73"></a></h4>
+                    <h6 class="caption"><i class="pt-time inline"></i>23:30–00:00</h6>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chatContainer hide tabActive" id="chatContainer">
+      <div class="chatWrap">
+        <h4 class="chatHeader"><i class="pt-chat inline"></i>傾天室</h4>
+        <div class="chatContentCon">
+          <div class="chatContent chat">
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>鄭松泰<span class="class class1"></span><span class="time">11:36</span></h5>
+                <p>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww<a href="#">google.com</a></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>鄭松泰<span class="class class1"></span><span class="time">11:36</span></h5>
+                <p>上個月有幸跟隨《百無禁技》主持人Frank，參觀為期3天的成人用品展。當中除了有較易見到的潤滑劑、按摩器、性趣衣服之外，亦有一些與性用品看似無關的3D投映、攝影用具等等。</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>黃洋達<span class="time">11:36</span></h5>
+                <p>車震都比人嚇，係大陸😝</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>謎之音<span class="time">11:36</span></h5>
+                <p>咁多女，葡萄中....</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>HaruYuki AriTa<span class="class class2"></span><span class="time">11:36</span></h5>
+                <p>POSE唔啱，佢開口先啦</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>HaruYuki AriTa<span class="class class3"></span><span class="time">11:36</span></h5>
+                <p>呢尐都係緣分問題</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>HaruYuki AriTa<span class="time">11:36</span></h5>
+                <p>我哋BI唔會有特定目標，遇到啱就上</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>HaruYuki AriTa<span class="time">11:36</span></h5>
+                <p>但係又唔係濫</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>HaruYuki AriTa<span class="time">11:36</span></h5>
+                <p>只係我哋男女都可以愛</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="imgBox"></div>
+              <div class="textBox">
+                <h5>Crystal Ng<span class="time">11:36</span></h5>
+                <p>Ic</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="chatInput">
+          <!--          <div class="chat-login"><i class="pt-facebook inline"></i>登入傾天室</div>-->
+          <input type="text" tabindex="1" placeholder="你自己諗下啦！">
+          <div class="sendButton yellowGrad">Send</div>
+        </form>
+      </div>
+    </div>
+
+    <div class="dark-overlay" id="dark-overlay"></div>
+
+  </div>
+  <script src="js/live.js"></script>
+</body>
+
+</html>

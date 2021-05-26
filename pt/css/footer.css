@@ -1,0 +1,340 @@
+/* =============================================================================
+   STUFF FOR FOOTER
+   ========================================================================== */
+
+.pageFooter {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: -1px;
+  width: 100%;
+  background-color: #746551;
+}
+.footer-sub {
+  clear: both;
+  background-image: url(../img/newspaper.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.sub-main {
+  padding: 4em 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(116, 101, 81, 0.5);
+  overflow: hidden;
+  text-align: center;
+}
+.sub-main .h1 {
+  color: #fff;
+  margin-top: 0.125em;
+  line-height: 1.25;
+  text-shadow: 0 0 1em rgba(0, 0, 0, 0.5), 0 0 5em rgba(0, 0, 0, 0.25);
+}
+.footer-followUs {
+  text-align: center;
+  margin: 0.75em 0;
+}
+.footer-followUs.live {
+  margin: 0.25em 0;
+}
+.footer-followUs .shareCon {
+  display: inline-block;
+  float: none;
+  color: #fff;
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.footer-followUs .shareCon:hover {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+.footer-followUs .shareCon a {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 1rem;
+}
+.footer-followUs.live .shareCon a {
+  width: 1.3125em;
+  height: 1.3125em;
+  margin: 0.25em;
+  margin: auto 0.25em;
+}
+.footer-followUs .shareCon i {
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-align: center;
+  margin: auto;
+}
+.footer-followUs.live .shareCon i {
+  font-size: 1.3125em;
+}
+.footer-siteMap {
+  clear: both;
+  overflow: hidden;
+  padding: 2em 0;
+  background-color: hsl(97, 3%, 20%);
+}
+.siteMap-group-wrap {
+  overflow: hidden;
+}
+.siteMap-group-wrap + * {
+  border-top: 1px solid hsl(97, 3%, 20%);
+  margin-top: 1.5em;
+  padding-top: 1.5em;
+}
+body.dark .siteMap-group-wrap + * {
+  border-top: 1px solid hsl(97, 3%, 20%);
+}
+.siteMap-group {
+  float: left;
+  overflow: hidden;
+  width: 12.5%;
+}
+.siteMap-group.fullWidth {
+  width: 100%;
+}
+.siteMap-group.wide {
+  width: 25%;
+}
+.news .siteMap-group:nth-child(1) > ul > li,
+.news .siteMap-group:nth-child(2) > ul > li,
+.news .siteMap-group:nth-child(3) > ul > li {
+  float: left;
+  width: 33.3333333333%;
+}
+.siteMap-group > ul {
+  margin-top: 0.5em;
+}
+.siteMap-group > ul.list li {
+  float: left;
+  width: 12.5%;
+}
+.siteMap-group > div {
+  float: left;
+  overflow: hidden;
+  width: 12.5%;
+  margin-top: 0.5em;
+}
+.siteMap-group li,
+body.dark .siteMap-group li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 0.75em;
+  line-height: 1.875;
+  color: hsl(97, 3%, 60%);
+}
+.siteMap-group > h4,
+body.dark .siteMap-group > h4 {
+  line-height: 1;
+  font-weight: bold;
+  color: hsl(97, 3%, 80%);
+}
+.siteMap-group h6,
+body.dark .siteMap-group h6 {
+  line-height: 1;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: hsl(97, 3%, 60%);
+}
+.footer-copyright {
+  background-color: hsl(97, 3%, 15%);
+  padding: 1.5em 0;
+}
+.footer-copyright h6,
+.footer-copyright h6 a,
+body.dark .footer-copyright h6,
+body.dark .footer-copyright h6 a {
+  color: hsl(97, 3%, 60%);
+}
+.brandInfo h5 {
+  line-height: 1.625;
+}
+body.dark .footer-siteMap,
+body.dark .footer-copyright {
+  background-color: #000;
+}
+@media only screen and (max-width: 1023px) {
+  .siteMap-group,
+  .siteMap-group > div,
+  .siteMap-group ul.list li {
+    width: 20%;
+  }
+  .siteMap-group.wide {
+    width: 40%;
+  }
+  .news .siteMap-group:nth-child(n+3),
+  .other .siteMap-group:nth-child(n+5) {
+    margin-top: 1em;
+  }
+  .news .siteMap-group:nth-child(3),
+  .other .siteMap-group:nth-child(5) {
+    clear: both;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .sub-main {
+    padding: 2em 0;
+  }
+  .sub-main .h1 > span {
+    display: block;
+  }
+  .footer-siteMap {
+    padding: 1em 0 0;
+    background-color: hsl(97, 3%, 15%);
+  }
+  .siteMap-group > div,
+  .siteMap-group ul.list.h4 li,
+  .siteMap-group ul.list.h6 li {
+    width: 33.3333333333%;
+  }
+  .footer-followUs .shareCon a {
+    margin: 0.75em;
+  }
+  .siteMap-toggle button.default,
+  body.dark .siteMap-toggle button.default {
+    box-shadow: inset 0 0 0 1px hsl(97, 3%, 25%);
+    color: hsl(97, 3%, 60%);
+  }
+  .siteMap-group-wrap + * {
+    border-top: 1px solid hsl(97, 3%, 20%);
+  }
+  .siteMap-group,
+  .siteMap-group > div,
+  .siteMap-group ul.list li {
+    width: 33.3333333333%;
+  }
+  .siteMap-group.wide {
+    width: 66.6666666666%;
+  }
+  .news .siteMap-group:nth-child(1) > ul > li,
+  .news .siteMap-group:nth-child(2) > ul > li {
+    float: left;
+    width: 33.3333333333%;
+    width: 25%;
+  }
+  .news .siteMap-group:nth-child(1),
+  .news .siteMap-group:nth-child(2) {
+    width: 100%;
+  }
+  .news .siteMap-group:nth-child(n+2),
+  .other .siteMap-group:nth-child(n+3) {
+    margin-top: 1em;
+  }
+  .news .siteMap-group:nth-child(3),
+  .other .siteMap-group:nth-child(3) {
+    clear: both;
+  }
+  .siteMap-group-wrap:last-child {
+    margin-bottom: 1em;
+  }
+  .siteMap {
+/*    display: none;*/
+    visibility: hidden;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1002;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .siteMap.active {
+/*    display: block;*/
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .siteMap {
+    -webkit-transition: all 300ms ease;
+       -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+         -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+  }
+  .siteMap-inner {
+    -webkit-transition: transform 300ms ease;
+       -moz-transition: transform 300ms ease;
+        -ms-transition: transform 300ms ease;
+         -o-transition: transform 300ms ease;
+            transition: transform 300ms ease;
+  }
+  .siteMap.active .siteMap-exit {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .siteMap.active .siteMap-overlay {
+    opacity: 1;
+    z-index: 1001;
+    pointer-events: auto;
+  }
+  .siteMap-inner {
+    position: relative;
+    z-index: 1002;
+    width: 100%;
+    height: 100%;
+    margin-top: 100%;
+    padding: 1em;
+    font-size: 1.125rem;
+    -webkit-transform: translateY(20%);
+       -moz-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+         -o-transform: translateY(20%);
+            transform: translateY(20%);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .siteMap.active .siteMap-inner {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    margin-top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .footer-copyright {
+    text-align: center;
+    padding: 1em 0 2em;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .sub-main {
+    padding: 1.5em 0;
+  }
+  .siteMap-group,
+  .siteMap-group > div,
+  .siteMap-group ul.list li {
+    width: 50%;
+  }
+  .siteMap-group.wide {
+    width: 100%;
+  }
+  .news .siteMap-group:nth-child(n+3),
+  .other .siteMap-group:nth-child(n+3) {
+    margin-top: 1em;
+  }
+  .news .siteMap-group:nth-child(3),
+  .other .siteMap-group:nth-child(3) {
+    clear: both;
+  }
+  .news .siteMap-group:nth-child(1) {
+    width: 100%;
+  }
+  .news .siteMap-group:nth-child(1) > ul > li,
+  .news .siteMap-group:nth-child(2) > ul > li {
+    width: 33.3333333333%;
+    float: left;
+  }
+}

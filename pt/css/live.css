@@ -1,0 +1,1316 @@
+body {
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: hsl(97, 3%, 90%);
+}
+
+/*scrollbar*/
+
+.progWrap,
+.progContainer,
+.chatWrap,
+.chatContainer,
+body {
+  -ms-overflow-style: none;
+  overflow: hidden;
+}
+.liveWrap,
+.progContentCon,
+.chatContentCon {
+  -ms-overflow-style: scrollbar;
+  overflow-y: scroll;
+}
+.progWrap::-webkit-scrollbar,
+.progContainer::-webkit-scrollbar,
+.chatWrap::-webkit-scrollbar,
+.chatContainer::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+body.dark ::-webkit-scrollbar-track,
+.progContentCon::-webkit-scrollbar-track {
+  background-color: hsl(34, 3%, 10%);
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background: hsl(97, 3%, 90%);
+  -webkit-box-shadow: inset 0 0 0 1px hsl(97, 3%, 75%);
+  box-shadow: inset 0 0 0 1px hsl(97, 3%, 75%);
+}
+.chatContentCon::-webkit-scrollbar-thumb {
+  background: hsl(97, 3%, 85%);
+}
+body.dark ::-webkit-scrollbar-thumb,
+.progContentCon::-webkit-scrollbar-thumb {
+  background-color: hsl(34, 3%, 30%);
+  -webkit-box-shadow: inset 0 0 0 1px hsl(97, 3%, 10%);
+  box-shadow: inset 0 0 0 1px hsl(97, 3%, 10%);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: hsl(97, 3%, 75%);
+}
+body.dark ::-webkit-scrollbar-thumb:window-inactive,
+.progContentCon::-webkit-scrollbar-thumb:window-inactive {
+  background-color: hsl(34, 3%, 20%);
+}
+
+@media only screen and (max-width: 613px) and (orientation: portrait),
+screen and (orientation:landscape) and (max-height: 413px) and (max-device-width: 735px) {
+  .chatContentCon::-webkit-scrollbar-thumb {
+    background: hsl(97, 3%, 90%);
+  }
+}
+/*transition*/
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:window-inactive,
+.liveContainer {
+  -webkit-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+     -moz-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+      -ms-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+       -o-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+          transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+}
+.progContainer {
+  -webkit-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+     -moz-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+      -ms-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+       -o-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+          transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease;
+}
+.chatContainer {
+  -webkit-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease, padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+     -moz-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease, padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+      -ms-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease, padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+       -o-transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease, padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+          transition: transform 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000), background-color 300ms ease, padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.chatVoteCon {
+  -webkit-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+     -moz-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+      -ms-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+       -o-transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+          transition: padding 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.nowPlaying .prog-btn li {
+  -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+       -o-transition: all 200ms ease;
+          transition: all 200ms ease;
+}
+
+
+/* =============================================================================
+   STUFF FOR VIDEOWRAPPER VIDEO MP3
+   ========================================================================== */
+
+/*videoWrapper video MP3*/
+
+.videoWrapper audio {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+.videoWrapper .audio-live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  text-align: center;
+  color: hsl(97, 3%, 95%);
+  pointer-events: none;
+}
+.videoWrapper .audio-live i,
+.videoWrapper .audio-live span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.videoWrapper .audio-live i {
+  width: 5rem;
+  height: 5rem;
+  padding-bottom: 1.5rem;
+  font-size: 5rem;
+}
+.videoWrapper .audio-live span {
+  width: 100%;
+  height: 1rem;
+  padding-top: 4.5rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.videoWrapper.video .audio-live,
+.videoWrapper.video audio {
+  display: none;
+}
+.videoWrapper.video iframe {
+  display: block;
+}
+.videoWrapper.mp3 .audio-live,
+.videoWrapper.mp3 audio {
+  display: block;
+}
+.videoWrapper.mp3 iframe {
+  display: none;
+}
+
+/* =============================================================================
+   STUFF FOR LIVE
+   ========================================================================== */
+
+.progContainer,
+.chatContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10002;
+  height: 100%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.progContainer {
+  left: 0;
+  width: 16rem;
+  background-color: hsl(34, 3%, 15%);
+}
+.progContainer.hide {
+  -webkit-transform: translateX(-16.0625rem);
+  -moz-transform: translateX(-16.0625rem);
+  -ms-transform: translateX(-16.0625rem);
+  -o-transform: translateX(-16.0625rem);
+  transform: translateX(-16.0625rem);
+}
+body.dark .progContainer {
+  box-shadow: 0 0 0 1px hsl(34, 3%, 20%);
+}
+.chatContainer {
+  right: 0;
+  width: 22rem;
+  background: hsl(97, 3%, 85%);
+}
+.chatContainer.hide {
+  -webkit-transform: translateX(22.0625rem);
+  -moz-transform: translateX(22.0625rem);
+  -ms-transform: translateX(22.0625rem);
+  -o-transform: translateX(22.0625rem);
+  transform: translateX(22.0625rem);
+}
+body.dark .chatContainer {
+  background-color: hsl(34, 3%, 20%);
+  box-shadow: 0 0 0 1px hsl(34, 3%, 20%);
+}
+.chatToggle,
+.progToggle {
+  position: absolute;
+  top: 50%;
+  left: 15.5rem;
+  z-index: 1000;
+  width: 1rem;
+  height: 5rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.chatToggle {
+  left: -0.5rem;
+}
+.chatToggle i,
+.progToggle i {
+  width: 1rem;
+  margin-right: 0;
+  line-height: 5rem;
+  color: hsl(34, 3%, 60%);
+}
+.liveWrap,
+.progWrap,
+.chatWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.mobile .progContent,
+.mobile .chatContent {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding-bottom: 1px;
+  height: 100%;
+}
+.progContentCon,
+.chatContentCon {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 3.25rem;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+.progContentCon {
+  padding: 0;
+  bottom: 0;
+}
+
+/* =============================================================================
+   progContainer
+   ========================================================================== */
+
+.statusCon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 3.25rem;
+  background-color: hsl(34, 3%, 20%);
+}
+.statusCon .progHeader {
+  padding-right: 0.25em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3.25rem;
+  letter-spacing: 0.25em;
+  box-shadow: inset 0 -1px hsl(34, 3%, 15%);
+  color: hsl(97, 3%, 95%);
+}
+
+.nowPlaying {
+  padding: 1.5rem;
+  background-color: hsl(34, 3%, 20%);
+}
+.nowPlaying .imgBox {
+  width: 8rem;
+  height: 8rem;
+  margin: auto;
+  box-shadow: 0 0.25em 0.5rem rgba(0, 0, 0, 0.25);
+}
+.nowPlaying .textBox {
+  text-align: center;
+}
+.nowPlaying .prog-title {
+  margin: 0.75rem auto 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: hsl(97, 3%, 95%);
+}
+.nowPlaying .prog-abstract {
+  font-size: 0.875rem;
+  line-height: 1.3125;
+  margin-bottom: 0.75rem;
+  color: hsl(34, 3%, 70%);
+}
+
+/*    .NOWPLAYING .PROG-BTN    */
+
+.nowPlaying .prog-btn {
+  margin: 0.5em auto 1em;
+  text-align: center;
+}
+.nowPlaying .prog-btn ul {}
+.nowPlaying .prog-btn li {
+  display: inline-block;
+  font-size: 1em;
+  color: hsl(34, 3%, 70%);
+}
+.nowPlaying .prog-btn li ~ li {
+  margin-left: 0.3125em;
+}
+.nowPlaying .prog-btn li:hover {
+  color: hsl(97, 3%, 95%);
+}
+
+/*.live-channel*/
+
+.live-channel {
+  margin-top: -0.75em;
+  padding: 0 1rem 1.5rem;
+  background-color: hsl(34, 3%, 20%);
+}
+.live-channel-content {
+  overflow: hidden;
+  position: relative;
+  padding: 0.75em 1rem;
+  border-radius: 3px;
+  background-color: hsl(34, 3%, 15%);
+  border: 1px solid hsl(34, 3%, 20%);
+}
+          .live-channel h4,
+body.dark .live-channel h4 {
+  color: #bea22f;
+}
+.live-channel p {
+  font-size: 0.825rem;
+  line-height: 1.375;
+  color: hsl(97, 3%, 95%);
+  margin-top: 0.25em;
+}
+.live-channel button {
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+.live-channel button.switchClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: auto;
+  color: hsl(34, 3%, 60%);
+  border-radius: 0;
+  cursor: pointer;
+}
+.live-channel button.switchClose i {
+  line-height: 1.5rem;
+}
+
+/* =============================================================================
+   chatContainer
+   ========================================================================== */
+
+          .chatHeader {
+  padding-left: 0.25em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3.25rem;
+  letter-spacing: 0.25em;
+  box-shadow: inset 0 -1px hsl(34, 3%, 80%);
+  background-color: hsl(97, 3%, 85%);
+  color: hsl(34, 3%, 20%);
+}
+body.dark .chatHeader {
+  background-color: hsl(34, 3%, 20%);
+  box-shadow: inset 0 -1px hsl(34, 3%, 15%);
+}
+.chat .media {
+  padding-left: 2.25rem;
+}
+.chat .media:last-child {
+  padding-bottom: 1rem;
+}
+.chat .media + * {
+  margin-top: 0.75em;
+}
+.chat .media .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-size: cover;
+  background-position: center;
+}
+/*TEMP IMG DELETE ME LATER*/
+.chat .media .imgBox {
+  background-image: url(../img/host/%E9%84%AD%E6%9D%BE%E6%B3%B0.jpg);
+}
+.chat .media .textBox {
+  padding-right: 2.25rem;
+}
+          .chat .media .textBox p {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  word-break: break-all;
+}
+body.dark .chat .media .textBox p {
+  color: hsl(97, 3%, 90%);
+}
+.chat .media .textBox p a {
+  color: #bea22f;
+  font-weight: bold;
+}
+          .chat .media .textBox h5 {
+  margin-bottom: 0.125rem;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  line-height: 1rem;
+  color: hsl(34, 3%, 20%);
+}
+body.dark .chat .media .textBox h5 {
+  color: hsl(97, 3%, 95%);
+}
+.chat .media .textBox h5 .class {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  -webkit-transform: scale(1.75);
+  -moz-transform: scale(1.75);
+  -ms-transform: scale(1.75);
+  -o-transform: scale(1.75);
+  transform: scale(1.75);
+  margin-left: 0.5em;
+  border: none;
+  background-size: cover;
+  background-position: center;
+}
+.chat .media .textBox h5 .class1 {
+  background-image: url(../img/class1.png);
+}
+.chat .media .textBox h5 .class2 {
+  background-image: url(../img/class2.png);
+}
+.chat .media .textBox h5 .class3 {
+  background-image: url(../img/class3.png);
+}
+.chat .media .textBox h5 .queen {
+  background-image: url(../img/class3.png);
+}
+.chat .media .textBox h5 .king {
+  background-image: url(../img/class3.png);
+}
+.chat .media .textBox h5 .time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.7em;
+  line-height: 1rem;
+  font-weight: normal;
+  color: hsl(34, 3%, 60%);
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.chatInput {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+}
+.chat-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  font-size: 0.875rem;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background-color: #3B5998;
+  color: #fff;
+}
+.chat-login > a {
+  display: block;
+}
+          .chatInput input {
+  float: left;
+  width: 80%;
+  height: 50px;
+  padding: 17px 1rem;
+  font-size: 1rem;
+  line-height: 16px;
+  border-radius: 0;
+  box-shadow: inset 0 1px hsl(34, 3%, 80%);
+  box-sizing: border-box;
+}
+body.dark .chatInput input {
+  background: hsl(34, 3%, 30%);
+  box-shadow: inset 0 1px hsl(34, 3%, 20%);
+  color: hsl(97, 3%, 95%);
+}
+.sendButton {
+  float: right;
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 50px;
+  box-shadow: inset 1px 0 hsl(48, 60%, 36%), inset 0 1px hsl(48, 60%, 36%);
+  background-color: #bea22f;
+  color: #fff;
+  cursor: pointer;
+}
+.sendButton:active {
+  background-color: hsl(48, 60%, 36%)
+}
+
+/* =============================================================================
+   liveContainer
+   ========================================================================== */
+
+.liveContainer {
+  position: fixed;
+  top: 3.25rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+.liveContainer::after {
+  /* clearfix */
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+  display: table;
+  clear: both;
+}
+.liveContainer.prog header,
+.liveContainer.prog {
+  padding-left: 16rem;
+}
+.liveContainer.chat header,
+.liveContainer.chat {
+  padding-right: 22rem;
+}
+.liveContainer header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 3.25rem;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
+/*  background-color: #746551;*/
+}
+body.dark .liveContainer header {
+  box-shadow: inset 0 -1px hsl(34, 3%, 10%);
+}
+.liveContainer header button {
+  margin: 0;
+  line-height: 3.25rem;
+  color: #746551;
+}
+body.dark .liveContainer header button {
+  color: hsl(97, 3%, 95%);
+}
+.liveContainer .progToggle2 {
+  float: left;
+  margin-left: 0.75rem;
+}
+.liveContainer .chatToggle2 {
+  float: right;
+  margin-right: 0.75rem;
+}
+.live-brand {
+  width: 110px;
+  margin: auto;
+}
+.live-brand-logo {
+  width: 110px;
+  height: 3.25rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/PASSIONTIMES_C.png);
+}
+body.dark .live-brand-logo {
+  background-image: url(../img/PASSIONTIMES_CW.png);
+}
+.liveWrap {
+  padding: 0 1.5rem;
+}
+.liveInner {
+  max-width: 900px;
+  margin: auto;
+}
+.videoSetting {
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.liveCount {
+  line-height: 36px;
+  float: right;
+  color: hsl(34, 3%, 30%);
+}
+.live-bannerAd {
+  margin: 1.5em auto;
+}
+.live-bannerAd.ad728 img {
+  max-width: 728px;
+}
+.live-bannerAd.ad680 img {
+  max-width: 680px;
+}
+.liveInner .videoCon {
+  margin-top: 1.5rem;
+}
+.liveInner .live-bannerAd + .videoCon {
+  margin-top: auto;
+}
+
+
+/* =============================================================================
+   vote
+   ========================================================================== */
+
+          .vote {
+  overflow: hidden;
+  margin-bottom: 1em;
+  padding: 0.75em 1em;
+  border-radius: 5px;
+  border: 1px solid hsl(34, 3%, 80%);
+  background-color: hsl(97, 3%, 85%);
+}
+body.dark .vote {
+  border: 1px solid hsl(34, 3%, 20%);
+  background-color: hsl(34, 3%, 10%);
+}
+.vote h4 {
+  clear: both;
+  font-weight: bold;
+  color: hsl(34, 3%, 20%);
+}
+.voteResult {
+  padding-top: 0.5em;
+}
+.voteResult h5 {
+  margin-bottom: 0.2em;
+  color: hsl(34, 3%, 30%);
+}
+body.dark .voteResult h5 {
+  color: hsl(34, 3%, 80%);
+}
+.resultRow {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #bea22f;
+}
+.resultRow + * {
+  margin-top: 1em;
+}
+/*TMEP WIDTH DELETE ME LATER*/
+.resultRow.r1 {
+  width: 39.68%;
+}
+.resultRow.r2 {
+  width: 38.1%;
+}
+.resultRow.r3 {
+  width: 22.22%;
+}
+.radio-con {
+  overflow: hidden;
+  padding: 0.5em 0 0.25em;
+}
+.vote button {
+  clear: both;
+}
+
+/* =============================================================================
+   footer
+   ========================================================================== */
+
+.liveFooter {
+  margin: 3em auto 3em;
+}
+.liveFooter .footer-followUs {
+  float: none;
+  text-align: center;
+  margin-top: 0;
+}
+.liveFooter .footer-followUs .shareCon {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.25rem;
+  display: inline-block;
+  color: hsl(34, 3%, 30%);
+}
+body.dark .liveFooter .footer-followUs .shareCon {
+  color: hsl(34, 3%, 70%);
+}
+.liveFooter .brandInfo {
+  text-align: center;
+  float: none;
+}
+.liveFooter .brandInfo h5,
+.liveFooter .brandInfo h5 a {
+  color: hsl(34, 3%, 30%);
+}
+body.dark .liveFooter .brandInfo h5,
+body.dark .liveFooter .brandInfo h5 a {
+  color: hsl(34, 3%, 70%);
+}
+
+/* =============================================================================
+   STUFF FOR MOBILE
+   ========================================================================== */
+
+.progToggle-mobile,
+.mobile-logo,
+.expandBtn,
+.chatVoteToggle {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .liveContainer.prog header,
+  .liveContainer.prog {
+    padding-left: 0;
+  }
+  .liveContainer.chat header,
+  .liveContainer.chat {
+    padding-right: 40%;
+  }
+  .chatContainer.hide {
+    -webkit-transform: translateX(105%);
+    -moz-transform: translateX(105%);
+    -ms-transform: translateX(105%);
+    -o-transform: translateX(105%);
+    transform: translateX(105%);
+  }
+  .chatContainer {
+    width: 40%;
+    z-index: 1000;
+  }
+  .chatToggle {
+    z-index: 1000;
+  }
+}
+/*1px small than the iphone6 plus landscape*/
+/*
+@media only screen and (max-width: 735px) {
+  .liveContainer.chat header,
+  .liveContainer.chat {
+    padding-right: 0;
+  }
+  .chatContainer {
+    width: 22rem;
+    z-index: 10002;
+  }
+  .chatContainer.hide {
+    margin-right: 0;
+    -webkit-transform: translateX(22.0625rem);
+    -moz-transform: translateX(22.0625rem);
+    -ms-transform: translateX(22.0625rem);
+    -o-transform: translateX(22.0625rem);
+    transform: translateX(22.0625rem);
+  }
+  .liveWrap {
+    padding: 0 1rem;
+  }
+}
+*/
+/*@media only screen and (max-width: 613px) and (orientation: portrait),*/
+@media only screen and (max-width: 768px) and (orientation: portrait),
+screen and (orientation:landscape) and (max-height: 413px) and (max-device-width: 735px) {
+  .videoWrapper .audio-live i {
+    width: 3rem;
+    height: 3rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+  }
+  .videoWrapper .audio-live span {
+    height: 0.875rem;
+    padding-top: 3rem;
+    font-size: 0.875rem;
+  }
+  
+  .chat .media .textBox h5,
+  .chat .media .textBox p {
+    font-size: 0.875rem;
+  }
+  .live-bannerAd {
+    display: none;
+  }
+  .progContainer.hide {
+    -webkit-transform: translateX(-16.0625rem);
+    -moz-transform: translateX(-16.0625rem);
+    -ms-transform: translateX(-16.0625rem);
+    -o-transform: translateX(-16.0625rem);
+    transform: translateX(-16.0625rem);
+  }
+  .liveContainer {
+    top: 0;
+  }
+  .liveContainer header {
+    display: none;
+  }
+  .chatVoteCon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    pointer-events: none;
+    padding-top: 56.25%;
+  }
+  .chatVoteCon.expand {
+    padding-top: 0;
+  }
+            .chatVoteWrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    pointer-events: auto;
+    background-color: hsl(97, 3%, 90%);
+  }
+  body.dark .chatVoteWrap {
+    background: hsl(34, 3%, 10%);
+    background: hsl(34, 3%, 0%);
+  }
+            .mobile-logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/PASSIONTIMES-M.png);
+    background-size: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-right: 1px solid hsl(34, 3%, 80%);
+  }
+  body.dark .mobile-logo {
+    background-image: url(../img/PASSIONTIMES-MW.png);
+    border-color: hsl(34, 3%, 20%);
+  }
+            .chatVoteToggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    text-align: left;
+    box-shadow: inset 0 -1px hsl(34, 3%, 80%);
+    padding-left: 3.625rem;
+  }
+  body.dark .chatVoteToggle {
+    box-shadow: inset 0 -1px hsl(34, 3%, 20%);
+  }
+            .chatVoteToggle button {
+    float: none;
+    height: 34px;
+    margin: 8px auto;
+    font-size: 0.875rem;
+    line-height: 34px;
+    box-shadow: none;
+  }
+  body.dark .chatVoteToggle button {
+    box-shadow: none;
+    color: #fff;
+  }
+            .chatVoteToggle button.active {
+    background-color: hsl(97, 3%, 85%);
+    box-shadow: inset 0 0 0 1px hsl(97, 3%, 75%);
+  }
+  body.dark .chatVoteToggle button.active {
+    background-color: hsl(97, 3%, 20%);
+  }
+            .expandBtn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3125rem;
+    line-height: 50px;
+    text-align: center;
+    border-left: 1px solid hsl(34, 3%, 80%);
+    color: #746551;
+    cursor: pointer;
+  }
+  body.dark .expandBtn {
+    color: #fff;
+    border-color: hsl(34, 3%, 20%);
+  }
+  .chatVoteTab {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .chatVoteTab > * {
+    display: none;
+  }
+  .chatContainer.tabActive,
+  .chatVoteTab .tabActive {
+    display: block;
+  }
+  .videoSetting {
+    margin-top: 0;
+  }
+  .videoSetting button {
+    float: none;
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.875rem;
+    line-height: 40px;
+  }
+  .videoSetting button + * {
+    margin-top: 0.75rem;
+  }
+  .progToggle-mobile {
+    display: block;
+  }
+  .liveCount {
+    float: none;
+    line-height: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .liveContainer.prog .liveWrap,
+  .liveContainer.prog header,
+  .liveContainer.prog {
+    padding-left: 0;
+  }
+  .liveContainer.chat .liveWrap,
+  .liveContainer.chat header,
+  .liveContainer.chat {
+    padding-right: 0;
+  }
+  .liveWrap {
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .chatContainer {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    pointer-events: none;
+    padding-top: 56.25%;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+  }
+  body.dark .chatContainer {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .chatContainer.hide {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .chatContainer.expand {
+    padding-top: 0;
+  }
+  .chatToggle2,
+  .chatToggle,
+  .chatHeader {
+    display: none;
+  }
+  .chatWrap {
+    overflow: hidden;
+  }
+  body.dark .chatContent {
+    background-color: transparent;
+  }
+  .chatContentCon {
+    pointer-events: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    padding: 1rem 0.75rem;
+  }
+  .chatInput {
+    pointer-events: auto;
+  }
+  body.dark .chatInput input {
+    background: hsl(34, 3%, 20%);
+  }
+  .liveFooter {
+    margin: 2em auto 1em;
+  }
+}
+
+/*    1px smaller than iphone 6 plus    */
+/*@media only screen and (max-width: 613px) and (orientation: portrait),*/
+/*screen and (orientation:landscape) and (max-height: 413px) and (max-device-width: 735px) {*/
+@media screen and (orientation:landscape) and (max-height: 413px) and (max-device-width: 735px) {
+  .liveContainer {
+    top: 0;
+  }
+  .liveContainer header {
+    display: none;
+  }
+  .chatVoteConM {
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+  }
+  .chatVoteConM.expand {
+    height: 100%;
+  }
+  .chatVoteCon {
+    position: static;
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+  }
+  .videoCon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    overflow: hidden;
+  }
+  .videoWrapper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+  }
+}
+
+/* =============================================================================
+   COPIED DIRECTLY FROM ARTICLE.CSS (PROG TABLE)
+   ========================================================================== */
+
+/*    progTable    */
+
+.utilityMenu {}
+.utilityMenu ul {
+  overflow: hidden;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+body.dark .utilityMenu ul {
+  background-color: hsl(34, 3%, 20%);
+}
+.utilityMenu ul > li {
+  float: left;
+  font-size: 0.675em;
+  line-height: 2.25;
+  font-weight: bold;
+  text-align: center;
+  color: hsl(34, 3%, 60%);
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.progTable .utilityMenu ul > li {
+  width: 14.285714286%;
+}
+.utilityMenu ul > li:hover {
+  background: hsl(34, 3%, 30%);
+}
+
+/*    .progTable.day1 .utilityMenu ul > li ACTIVE    */
+
+.progTable.day1 .utilityMenu ul > li:nth-child(2) {
+  background-color: #bea22f;
+  color: hsl(97, 3%, 95%);
+}
+.progTable.day2 .utilityMenu ul > li:nth-child(3) {
+  background-color: #bea22f;
+  color: hsl(97, 3%, 95%);
+}
+.progTable.day3 .utilityMenu ul > li:nth-child(4) {
+  background-color: #bea22f;
+  color: hsl(97, 3%, 95%);
+}
+.progTable.day4 .utilityMenu ul > li:nth-child(5) {
+  background-color: #bea22f;
+  color: hsl(97, 3%, 95%);
+}
+.progTable.day5 .utilityMenu ul > li:nth-child(6) {
+  background-color: #bea22f;
+  color: hsl(97, 3%, 95%);
+}
+.progTable.day6 .utilityMenu ul > li:nth-child(7) {
+  background-color: #bea22f;
+  color: hsl(97, 3%, 95%);
+}
+.progTable.day7 .utilityMenu ul > li:nth-child(1) {
+  background-color: #bea22f;
+  color: hsl(97, 3%, 95%);
+}
+
+/*    .progTable .vAlign .media    */
+
+.progTable {
+  border-top: none;
+  background-color: hsl(34, 3%, 20%);
+  padding: 0 1rem 0.75em;
+}
+.progTable .sectionHead {
+  border: none;
+  padding-left: 0.5em;
+  color: hsl(97, 3%, 95%);
+}
+.progTable .vAlign .media {
+  width: 100%;
+  padding: 0.75em 0;
+}
+.progTable .vAlign .media > a {
+  display: table-cell;
+  width: 50px;
+}
+.progTable .vAlign .imgBox {
+  width: 50px;
+  height: 50px;
+}
+.progTable .vAlign .textBox h4 {
+  color: hsl(97, 3%, 95%);
+}
+
+/* =============================================================================
+   OVERWRITE PROG TABLE FROM ARTICLE.CSS
+   ========================================================================== */
+
+/*.progTable*/
+
+.progTable {
+  padding: 1em;
+  background-color: hsl(34, 3%, 15%);
+}
+.progTable .vAlign .media > a,
+.progTable .vAlign .media .imgBox {
+  width: 40px;
+  height: 40px;
+}
+
+.progTable .media {display: none;}
+.progTable.day1 .media.d1 {display: block;}
+.progTable.day2 .media.d2 {display: block;}
+.progTable.day3 .media.d3 {display: block;}
+.progTable.day4 .media.d4 {display: block;}
+.progTable.day5 .media.d5 {display: block;}
+.progTable.day6 .media.d6 {display: block;}
+.progTable.day7 .media.d7 {display: block;}
+
+/*    .progTable .vAlign .media DAY1    */
+.progTable .media:nth-child(1) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-85.jpg);}
+.progTable .media:nth-child(1) h4 a:before {content:'大香港早晨';}
+.progTable .media:nth-child(2) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-83.jpg);}
+.progTable .media:nth-child(2) h4 a:before {content:'熱血政治';}
+.progTable .media:nth-child(3) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-7.jpg);}
+.progTable .media:nth-child(3) h4 a:before {content:'耶教異聞錄';}
+.progTable .media:nth-child(4) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-12.jpg);}
+.progTable .media:nth-child(4) h4 a:before {content:'少女熱線';}
+.progTable .media:nth-child(5) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-13.jpg);}
+.progTable .media:nth-child(5) h4 a:before {content:'Game民力量';}
+/*    .progTable .vAlign .media DAY2    */
+.progTable .media:nth-child(6) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-85.jpg);}
+.progTable .media:nth-child(6) h4 a:before {content:'大香港早晨';}
+.progTable .media:nth-child(7) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-83.jpg);}
+.progTable .media:nth-child(7) h4 a:before {content:'熱血政治';}
+.progTable .media:nth-child(8) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-2.jpg);}
+.progTable .media:nth-child(8) h4 a:before {content:'腐女民主連線';}
+.progTable .media:nth-child(9) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-23.jpg);}
+.progTable .media:nth-child(9) h4 a:before {content:'索書號';}
+.progTable .media:nth-child(10) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-21.jpg);}
+.progTable .media:nth-child(10) h4 a:before {content:'宅文化研究';}
+/*    .progTable .vAlign .media DAY3    */
+.progTable .media:nth-child(11) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-85.jpg);}
+.progTable .media:nth-child(11) h4 a:before {content:'大香港早晨';}
+.progTable .media:nth-child(12) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-83.jpg);}
+.progTable .media:nth-child(12) h4 a:before {content:'熱血政治';}
+.progTable .media:nth-child(13) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-35.jpg);}
+.progTable .media:nth-child(13) h4 a:before {content:'新契弟同盟';}
+.progTable .media:nth-child(14) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-33.jpg);}
+.progTable .media:nth-child(14) h4 a:before {content:'港豬想旅行';}
+.progTable .media:nth-child(15) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-34.jpg);}
+.progTable .media:nth-child(15) h4 a:before {content:'The Crazy Ones';}
+.progTable .media:nth-child(16) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-36.jpg);}
+.progTable .media:nth-child(16) h4 a:before {content:'深宵FOOL人信箱';}
+/*    .progTable .vAlign .media DAY4    */
+.progTable .media:nth-child(17) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-85.jpg);}
+.progTable .media:nth-child(17) h4 a:before {content:'大香港早晨';}
+.progTable .media:nth-child(18) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-83.jpg);}
+.progTable .media:nth-child(18) h4 a:before {content:'熱血政治';}
+.progTable .media:nth-child(19) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-43.jpg);}
+.progTable .media:nth-child(19) h4 a:before {content:'腹黑議事廳';}
+.progTable .media:nth-child(20) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-14.jpg);}
+.progTable .media:nth-child(20) h4 a:before {content:'熱血神奇膠';}
+.progTable .media:nth-child(21) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-4.jpg);}
+.progTable .media:nth-child(21) h4 a:before {content:'麻甩建港聯盟';}
+/*    .progTable .vAlign .media DAY5    */
+.progTable .media:nth-child(22) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-85.jpg);}
+.progTable .media:nth-child(22) h4 a:before {content:'大香港早晨';}
+.progTable .media:nth-child(23) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-83.jpg);}
+.progTable .media:nth-child(23) h4 a:before {content:'熱血政治';}
+.progTable .media:nth-child(24) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-5.jpg);}
+.progTable .media:nth-child(24) h4 a:before {content:'笑死朕';}
+.progTable .media:nth-child(25) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-51.jpg);}
+.progTable .media:nth-child(25) h4 a:before {content:'實戰攻擋';}
+.progTable .media:nth-child(26) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-54.jpg);}
+.progTable .media:nth-child(26) h4 a:before {content:'靈鏡MMR';}
+/*    .progTable .vAlign .media DAY6    */
+.progTable .media:nth-child(27) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-62.jpg);}
+.progTable .media:nth-child(27) h4 a:before {content:'熱血親子團';}
+.progTable .media:nth-child(28) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-61.jpg);}
+.progTable .media:nth-child(28) h4 a:before {content:'咬蔗幫';}
+.progTable .media:nth-child(29) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-21.jpg);}
+.progTable .media:nth-child(29) h4 a:before {content:'宅文化研究';}
+/*    .progTable .vAlign .media DAY7    */
+.progTable .media:nth-child(30) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-72.jpg);}
+.progTable .media:nth-child(30) h4 a:before {content:'古惑仔俱樂部';}
+.progTable .media:nth-child(31) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-15.jpg);}
+.progTable .media:nth-child(31) h4 a:before {content:'人妻先修班';}
+.progTable .media:nth-child(32) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-1.jpg);}
+.progTable .media:nth-child(32) h4 a:before {content:'奇奧研究社';}
+.progTable .media:nth-child(33) .imgBox {background-image: url(http://www.passiontimes.hk/images/tn/picon-73.jpg);}
+.progTable .media:nth-child(33) h4 a:before {content:'熱血劇場';}

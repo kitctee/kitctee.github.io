@@ -1,0 +1,94 @@
+/* =============================================================================
+    PROG PAGE
+========================================================================== */
+/*    .PROGEP .MEDIA .LISTMODE    */
+
+.listMode .progEp-module {
+  width: 100%;
+}
+.listMode .progEp .media {
+  height: 7.875rem;
+}
+.listMode .progEp .media > a {
+  width: 14rem;
+}
+.listMode .progEp .media > a,
+.listMode .progEp .media .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.listMode .progEp .media .textBox {
+  height: 7.875rem;
+  padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  padding-left: 14.75rem;
+}
+.listMode .progEp .media .textBox h6 {
+  padding-left: 14.75rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .progEp-module {
+    padding: 0 0.5em;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .progWrap .maxWrapper {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .progWrap .maxWrapper {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .progEp-module {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 568px) {
+  .listMode .progEp .media {
+    height: 6.75rem;
+  }
+  .listMode .progEp .media > a {
+    width: 12rem;
+  }
+  .listMode .progEp .media .textBox {
+    height: 6.75rem;
+    padding-left: 12.75rem;
+  }
+  .listMode .progEp .media .textBox h6 {
+    padding-left: 12.75rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .progEp-module {
+    width: 100%;
+  }
+  .progEp .media > a,
+  .progEp .media .imgBox {
+    width: 100%;
+    position: static;
+  }
+  .progEp .media {
+    height: auto;
+  }
+  .progEp .media .textBox {
+    height: auto;
+    padding: 0.5em 0.75em;
+  }
+  .progEp .media .textBox h4 {
+    max-height: 4em;
+    max-height: none;
+  }
+  .progEp .media .textBox h6 {
+    position: static;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+  }
+}

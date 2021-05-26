@@ -1,0 +1,153 @@
+/* To avoid CSS expressions while still supporting IE 7 and IE 6, use this script */
+/* The script tag referencing this file must be placed before the ending body tag. */
+
+/* Use conditional comments in order to target IE 7 and older:
+	<!--[if lt IE 8]><!-->
+	<script src="ie7/ie7.js"></script>
+	<!--<![endif]-->
+*/
+
+(function() {
+	function addIcon(el, entity) {
+		var html = el.innerHTML;
+		el.innerHTML = '<span style="font-family: \'pt-icon\'">' + entity + '</span>' + html;
+	}
+	var icons = {
+		'pt-home': '&#xe900;',
+		'pt-news': '&#xe601;',
+		'pt-life': '&#xe630;',
+		'pt-art': '&#xe634;',
+		'pt-prog': '&#xe600;',
+		'pt-chart': '&#xe635;',
+		'pt-live': '&#xe603;',
+		'pt-drama': '&#xe604;',
+		'pt-shop': '&#xe605;',
+		'pt-raise': '&#xe606;',
+		'pt-megaphone': '&#xe636;',
+		'pt-print': '&#xe607;',
+		'pt-menu': '&#xe608;',
+		'pt-email': '&#xe609;',
+		'pt-up': '&#xe616;',
+		'pt-down': '&#xe61c;',
+		'pt-left': '&#xe61a;',
+		'pt-right': '&#xe619;',
+		'pt-arrow-up': '&#xe60e;',
+		'pt-arrow-down': '&#xe60d;',
+		'pt-arrow-left': '&#xe612;',
+		'pt-arrow-right': '&#xe60f;',
+		'pt-setting': '&#xe613;',
+		'pt-seacrh': '&#xe614;',
+		'pt-headphone': '&#xe615;',
+		'pt-fire': '&#xe618;',
+		'pt-calendar': '&#xe617;',
+		'pt-chat': '&#xe61b;',
+		'pt-live2': '&#xe633;',
+		'enlarge2': '&#xe94b;',
+		'shrink2': '&#xe94c;',
+		'pt-login': '&#xe91a;',
+		'pt-logout': '&#xe91b;',
+		'pt-earth': '&#xe90d;',
+		'language': '&#xe90c;',
+		'pt-link': '&#xe90e;',
+		'pt-user': '&#xe90b;',
+		'pt-quill': '&#xe948;',
+		'pt-bookmark': '&#xe90f;',
+		'pt-bookmarks': '&#xe910;',
+		'pt-book': '&#xe902;',
+		'pt-camera': '&#xe94a;',
+		'pt-trophy': '&#xe94d;',
+		'pt-pushpin': '&#xe907;',
+		'pt-phone': '&#xe905;',
+		'pt-phone-hang-up': '&#xe906;',
+		'pt-contrast': '&#xe911;',
+		'pt-heart': '&#xe912;',
+		'pt-heart-broken': '&#xe913;',
+		'pt-checkbox-unchecked': '&#xe92e;',
+		'pt-checkbox-checked': '&#xe92d;',
+		'pt-image': '&#xe901;',
+		'pt-images': '&#xe949;',
+		'pt-compass': '&#xe908;',
+		'pt-time': '&#xe909;',
+		'pt-time-solid': '&#xe90a;',
+		'pt-warning': '&#xe914;',
+		'pt-info': '&#xe917;',
+		'pt-notification': '&#xe915;',
+		'pt-question': '&#xe916;',
+		'pt-cancel': '&#xe918;',
+		'pt-blocked': '&#xe919;',
+		'pt-terminal': '&#xe92f;',
+		'pt-share': '&#xe61f;',
+		'pt-facebook-like': '&#xe626;',
+		'pt-facebook': '&#xe931;',
+		'pt-instagram': '&#xe932;',
+		'pt-twitter': '&#xe934;',
+		'pt-youtube': '&#xe935;',
+		'pt-podcast': '&#xe61d;',
+		'pt-line': '&#xe622;',
+		'pt-google-plus': '&#xe930;',
+		'pt-dropbox': '&#xe939;',
+		'pt-onedrive': '&#xe93a;',
+		'pt-github': '&#xe93b;',
+		'pt-wordpress': '&#xe93c;',
+		'pt-tumblr': '&#xe93d;',
+		'pt-behance': '&#xe938;',
+		'pt-whatsapp': '&#xe933;',
+		'pt-dribbble': '&#xe937;',
+		'pt-pinterest': '&#xe945;',
+		'pt-flickr': '&#xe936;',
+		'pt-linkedin': '&#xe944;',
+		'pt-skype': '&#xe943;',
+		'pt-twitch': '&#xe632;',
+		'pt-yahoo': '&#xe93e;',
+		'pt-paypal': '&#xe946;',
+		'pt-credit-card': '&#xe904;',
+		'pt-qrcode': '&#xe903;',
+		'pt-list': '&#xe627;',
+		'pt-add': '&#xe631;',
+		'pt-remove': '&#xe62f;',
+		'pt-cross': '&#xe628;',
+		'pt-check': '&#xe629;',
+		'chrome': '&#xe62a;',
+		'firefox': '&#xe62b;',
+		'IE': '&#xe62c;',
+		'edge': '&#xe947;',
+		'opera': '&#xe62d;',
+		'safari': '&#xe62e;',
+		'pt-play': '&#xe91c;',
+		'pt-pause': '&#xe91d;',
+		'pt-stop': '&#xe91e;',
+		'pt-backward': '&#xe91f;',
+		'pt-forward': '&#xe920;',
+		'pt-previous': '&#xe923;',
+		'pt-next': '&#xe924;',
+		'pt-first': '&#xe921;',
+		'pt-last': '&#xe922;',
+		'pt-volume-high': '&#xe925;',
+		'pt-volume-medium': '&#xe926;',
+		'pt-volume-low': '&#xe927;',
+		'pt-volume-mute': '&#xe928;',
+		'pt-volume-mute2': '&#xe929;',
+		'pt-volume-up': '&#xe92a;',
+		'pt-volume-down': '&#xe92b;',
+		'pt-shuffle': '&#xe92c;',
+		'pt-apple': '&#xe940;',
+		'pt-windows8': '&#xe942;',
+		'pt-google': '&#xe94e;',
+		'pt-android': '&#xe941;',
+		'pt-tux': '&#xe93f;',
+		'0': 0
+		},
+		els = document.getElementsByTagName('*'),
+		i, c, el;
+	for (i = 0; ; i += 1) {
+		el = els[i];
+		if(!el) {
+			break;
+		}
+		c = el.className;
+		c = c.match(/[^\s'"]+/);
+		if (c && icons[c[0]]) {
+			addIcon(el, icons[c[0]]);
+		}
+	}
+}());

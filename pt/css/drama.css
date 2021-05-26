@@ -1,0 +1,245 @@
+/* =============================================================================
+   DRAMA MAIN
+   ========================================================================== */
+
+.drama-main {
+  position: relative;
+  height: 0;
+  max-height: 700px;
+  padding-top: 50%;
+  text-align: center;
+  background-color: #000;
+}
+.drama-main-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  max-height: 700px;
+  padding-top: 50%;
+  background-image: url(../img/drama6.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.drama-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 15%;
+  min-width: 240px;
+  max-width: 90%;
+  margin: auto;
+  padding-top: 3%;
+}
+@media only screen and (max-width: 1200px) {
+  .drama-main,
+  .drama-main-bg {
+    padding-top: 55%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .drama-main,
+  .drama-main-bg {
+    padding-top: 60%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .drama-main,
+  .drama-main-bg {
+    padding-top: 65%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .drama-main,
+  .drama-main-bg {
+    padding-top: 70%;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .drama-main,
+  .drama-main-bg {
+    min-height: 420px;
+    padding-top: 80%;
+  }
+  .drama-logo {
+    padding-top: 2em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .drama-main,
+  .drama-main-bg {
+    padding-top: 80%;
+  }
+}
+
+/* =============================================================================
+   DRAMA INFO
+   ========================================================================== */
+
+.drama-info {
+  margin: auto;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 3em 0;
+}
+body.dark .drama-info {
+  background-color: #000;
+}
+.drama-info .maxWrapper {
+  max-width: 600px;
+}
+.drama-info h2 {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: normal;
+  line-height: 1.5;
+}
+body.dark .drama-info h2 {
+  border-bottom: 1px solid hsl(34, 3%, 20%);
+}
+body.dark .drama-info h5 {
+  color: hsl(34, 3%, 50%);
+}
+
+/* =============================================================================
+   DRAMA
+   ========================================================================== */
+
+.drama-list,
+.drama-list ul,
+.drama-list ul li {
+  width: 100%;
+}
+.drama-list li {
+  position: relative;
+  padding: 4em 0;
+  overflow: hidden;
+  font-size: 1.25em;
+  min-height: 700px;
+  background-position: center;
+  background-size: cover;
+}
+.drama-list li + * {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.drama-list li.drama1 {
+  background-image: url(../img/drama1bg.jpg);
+}
+.drama-list li.drama2 {
+  background-image: url(../img/drama2bg.jpg);
+}
+.drama-list li > .maxWrapper {
+  position: relative;
+}
+.drama-list-logo {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  margin-bottom: 1em;
+  width: 300px;
+  max-width: 90%;
+}
+.drama-list li .textBox {
+  overflow: hidden;
+  float: right;
+  margin: auto;
+  padding: 1.5em 1.25em;
+  width: 320px;
+  max-width: 90%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+/*
+.drama-list li:nth-child(even) .drama-list-logo {
+  left: auto;
+  right: 2em;
+}
+.drama-list li:nth-child(even) .textBox {
+  float: left;
+}
+*/
+@media only screen and (max-width: 1280px) {
+  .drama-list-logo {
+    left: 1.5rem;
+  }
+/*
+  .drama-list li:nth-child(even) .drama-list-logo {
+    left: auto;
+    right: 1.5rem;
+  }
+  .drama-list li:nth-child(even) .textBox {
+    float: none;
+  }
+*/
+}
+@media screen and (max-width: 1023px) {
+  .drama-list-logo {
+    position: static;
+  }
+  .drama-list li .textBox {
+    float: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.5em;
+  }
+}
+.drama-list li.drama1 .textBox {
+  box-shadow: inset 0 0 0 0.25em #ffa095, 0 0 0 0.5em rgba(0, 0, 0, 0.25);
+}
+.drama-list li.drama2 .textBox {
+  box-shadow: inset 0 0 0 0.25em #ff7588, 0 0 0 0.5em rgba(0, 0, 0, 0.25);
+}
+.drama-list li.drama1 h3 {
+  color: #ffa095;
+}
+.drama-list li.drama2 h3 {
+  color: #ff7588;
+}
+.drama-list li h4 {
+  margin-top: 0.25em;
+  font-size: 0.75em;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.875);
+}
+.drama-list li h5 {
+  font-size: 0.625em;
+  margin: 1.5em auto 1.75em;
+  padding: 1em 0;
+  color: rgba(255, 255, 255, 0.625);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.drama-list li button {
+  width: 100%;
+}
+/*
+.drama-list li button.default.white {
+  color: #fff;
+  background: #ffa095;
+}
+*/
+.dramaBg-toggle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2.5em;
+  text-align: center;
+  width: 100%;
+  height: 0.5em;
+}
+.dramaBg-toggle div {
+  cursor: pointer;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0 0.125em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.dramaBg-toggle div.active {
+  background-color: rgba(255, 255, 255, 0.75);
+}

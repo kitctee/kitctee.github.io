@@ -1,0 +1,59 @@
+/*!
+ * liScroll 1.0
+ * Examples and documentation at: 
+ * http://www.gcmingati.net/wordpress/wp-content/lab/jquery/newsticker/jq-liscroll/scrollanimate.html
+ * 2007-2010 Gian Carlo Mingati
+ * Version: 1.0.2.1 (22-APRIL-2011)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ * Requires:
+ * jQuery v1.2.x or later
+ * 
+ */
+
+/*! 
+ *  ========== EDITED ==========
+ *  CHANGED LEFT -> TRANSLATEX
+ *  REMOVED STOP WHILE HOVER
+ *  ============================
+ */
+
+jQuery.fn.liScroll = function (settings) {
+  settings = jQuery.extend({
+    travelocity: 0.07
+  }, settings);
+  return this.each(function () {
+    var $strip = $(this);
+    $strip.addClass("newsticker")
+    var stripWidth = 1;
+    $strip.find("li").each(function (i) {
+      stripWidth += jQuery(this, i).outerWidth(true); // thanks to Michael Haszprunar and Fabien Volpi
+    });
+    var $mask = $strip.wrap("<div class='mask'></div>");
+    var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");
+    var containerWidth = $strip.parent().parent().width(); //a.k.a. 'mask' width 	
+    $strip.width(stripWidth);
+    var totalTravel = stripWidth + containerWidth;
+    var defTiming = totalTravel / settings.travelocity; // thanks to Scott Waye
+    function scrollnews(spazio, tempo) {
+      var $leftValue = $strip.css('left').slice(0, -2);
+      var $moveValue = $leftValue - spazio - containerWidth;
+      setInterval(function () {
+        $strip.animate({
+          borderSpacing: $moveValue
+        }, {
+          step: function (now, fx) {
+            $(this).css('transform', 'translateX(' + now + 'px)');
+          },
+          duration: tempo,
+          easing: 'linear'
+        }, 'linear', function () {
+          $(this).css('transform', 'translateX(' + containerWidth + 'px)');
+          scrollnews(totalTravel, defTiming);
+        });
+      }, 0);
+    }
+    scrollnews(totalTravel, defTiming);
+  });
+};

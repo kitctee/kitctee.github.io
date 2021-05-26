@@ -1,0 +1,82 @@
+/* =============================================================================
+   STUFF FOR PRINTING
+   ========================================================================== */
+
+@media print {
+    .pageHeader,
+    .titleTagCon,
+    .mainAside,
+    .wideAd,
+    .shareBar,
+    #shareSider,
+    .comment,
+    .mainAsideConFooter, 
+    .pageFooter {
+        display: none;
+    }
+.maxWrapper {
+    max-width: 100%;
+    padding: 0;
+}
+.mainContentWrap {
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    float: none;
+}
+h1 {
+    font-size: 1.5em;
+    margin: 20px 0 5px;
+}
+h5 {
+    font-size: 0.625rem;
+}
+header.mainHead {
+    margin: 0 0 15px;
+    padding: 0;
+    padding: 0 5rem;
+    border: none;
+}
+.mainContent .articleImg {
+    margin-bottom: 15px;
+}
+.articleImg img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.mainContent blockquote {
+    margin: 0 0 15px;
+    border: none;
+    border-radius: 0;
+    padding: 0 5rem;
+}
+.mainContent blockquote q {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.675;
+    letter-spacing: 0;
+    margin: auto;
+    padding: 0 0 0 20px;
+    border-left: 1px solid #ddd;
+}
+.articleImg figcaption {
+    font-size: 0.125rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+.articleContent {
+    width: 100%;
+    padding: 0 5rem;
+}
+    .articleContent p {
+        font-size: 0.75rem;
+        line-height: 1.675;
+        margin: 0 0 10px 0;
+    }
+h1, h2, h3, h4, h5, h6, div, span, li, p, blockquote {
+    color: #333 !important;
+}
+    q {
+        color: #ddd !important;
+    }
+}

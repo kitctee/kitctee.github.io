@@ -1,0 +1,925 @@
+/*    videoWrapper video MP3    */
+
+.videoWrapper audio {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+.videoWrapper .audio-live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  text-align: center;
+  color: hsl(97, 3%, 95%);
+  pointer-events: none;
+}
+.videoWrapper .audio-live i,
+.videoWrapper .audio-live span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.videoWrapper .audio-live i {
+  width: 5rem;
+  height: 5rem;
+  padding-bottom: 1.5rem;
+  font-size: 5rem;
+}
+.videoWrapper .audio-live span {
+  width: 100%;
+  height: 1rem;
+  padding-top: 4.5rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.videoWrapper.video .audio-live,
+.videoWrapper.video audio {
+  display: none;
+}
+.videoWrapper.video iframe {
+  display: block;
+}
+.videoWrapper.mp3 .audio-live,
+.videoWrapper.mp3 audio {
+  display: block;
+}
+.videoWrapper.mp3 iframe {
+  display: none;
+}
+@media only screen and (max-width: 613px) and (orientation: portrait),
+screen and (orientation:landscape) and (max-height: 413px) and (max-device-width: 735px) {
+  .videoWrapper .audio-live i {
+    width: 3rem;
+    height: 3rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+  }
+  .videoWrapper .audio-live span {
+    height: 0.875rem;
+    padding-top: 3rem;
+    font-size: 0.875rem;
+  }
+}
+
+/*    .progep-player .videoWrapper    */
+
+.progep-player .videoWrapper {
+  margin: auto;
+}
+.progep-player {
+  overflow: hidden;
+}
+@media screen and (max-width: 420px) {
+  .progep-player {
+    width: auto;
+    margin: 0 -1rem;
+  }
+}
+
+/*    .videoSetting    */
+
+.videoSetting {
+  margin-top: 1rem;
+}
+.progep-help {
+  margin: 0.75rem auto;
+  text-align: center;
+  font-size: 0.75em;
+  line-height: 1.5;
+  color: hsl(34, 3%, 60%);
+}
+.progep-format::after,
+.progep-part::after {
+  /* clearfix */
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+  display: table;
+  clear: both;
+}
+.progep-format button.default.white.active,
+.progep-part button.default.white.active {
+  background: #bea22f;
+  color: #fff;
+}
+body.dark .progep-format h6,
+.progep-format h6 {
+  line-height: 2.5;
+  margin-top: 0.75rem;
+}
+
+/*    .progep-download    */
+
+.progep-download {
+  position: relative;
+  float: left;
+}
+.progep-download ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: auto -2em;
+  margin-top: 1em;
+  padding: 0.5rem 0;
+  text-align: left;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1), 0 0 0.25em rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  -o-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: scale3d(0.8, 0.8, 0.8);
+  -moz-transform: scale3d(0.8, 0.8, 0.8);
+  -ms-transform: scale3d(0.8, 0.8, 0.8);
+  -o-transform: scale3d(0.8, 0.8, 0.8);
+  transform: scale3d(0.8, 0.8, 0.8);
+  -webkit-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -moz-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -ms-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -o-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  /* easeOutExpo */
+  pointer-events: none;
+  opacity: 0;
+}
+.progep-download.active ul {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  -o-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+body.dark .progep-download ul {
+  background-color: hsl(34, 3%, 20%);
+}
+@media screen and (max-width: 420px) {
+  .dd-overlay.progep-download-overlay {
+    opacity: 0.5;
+    z-index: 1001;
+    pointer-events: auto;
+  }
+  .progep-download {
+    position: static;
+    font-size: 0.875em;
+  }
+  .progep-download ul {
+    position: fixed;
+    max-height: 75%;
+    top: auto;
+    bottom: 0;
+    z-index: 1002;
+    margin: auto;
+    border-radius: 0;
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-transform: scale3d(0.975, 0.975, 0.975) translateY(25%);
+    -moz-transform: scale3d(0.975, 0.975, 0.975) translateY(25%);
+    -ms-transform: scale3d(0.975, 0.975, 0.975) translateY(25%);
+    -o-transform: scale3d(0.975, 0.975, 0.975) translateY(25%);
+    transform: scale3d(0.975, 0.975, 0.975) translateY(25%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.progep-download li {
+  font-size: 0.875rem;
+  line-height: 2.5;
+  padding: 0 1rem;
+  color: hsl(34, 3%, 30%);
+}
+body.dark .progep-download li {
+  color: hsl(97, 3%, 95%)
+}
+.progep-download li:hover {
+  background-color: hsl(34, 3%, 95%);
+}
+body.dark .progep-download li:hover {
+  background-color: hsl(34, 3%, 20%);
+}
+@media screen and (max-width: 420px) {
+  .progep-download li {
+    font-size: 1rem;
+  }
+}
+
+/* =============================================================================
+PROG HEADER
+========================================================================== */
+
+.prog-header-wrap {
+  margin-top: 2em;
+}
+.prog-header {
+  position: relative;
+}
+.prog-banner {
+  position: relative;
+  height: 0;
+  padding-top: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .prog-header-wrap {
+    margin-top: auto;
+  }
+  .prog-header-wrap .maxWrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+.prog-logo2 {
+  position: absolute;
+  top: 0;
+  left: auto;
+  left: 0;
+  right: 4rem;
+  right: 0;
+  bottom: 4.125em;
+  z-index: 5;
+  margin: auto;
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.prog-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  padding: 0.75em 1em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+}
+.prog-text h2,
+.prog-text h3,
+.prog-text h5 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.prog-text h2 {
+  display: none;
+  font-size: 1.25rem;
+  color: hsl(97, 3%, 95%);
+}
+.prog-text h3 {
+  color: hsl(97, 3%, 95%);
+}
+body.dark .prog-text h5,
+.prog-text h5 {
+  margin-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+.prog-banner-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.75em 1em;
+}
+.prog-banner-btn button {
+  margin-right: auto;
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 767px) {
+  .prog-logo2 {
+    height: 260px;
+  }
+  .prog-text {
+    padding-bottom: 3.25em;
+  }
+  .prog-text h3 {
+    font-size: 0.875rem;
+  }
+  .prog-text h5 {
+    font-size: 0.75rem;
+  }
+  .prog-banner-btn {
+    top: auto;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: auto;
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .prog-banner-btn button.default.white {
+    display: inline-block;
+    float: none;
+    margin: auto;
+    line-height: 24px;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .prog-banner-btn button.default.white + * {
+    margin-left: 0.5em;
+  }
+}
+@media screen and (max-width: 568px) {
+  .prog-banner {
+    padding-top: 0;
+    height: auto;
+  }
+  .prog-logo2 {
+    display: none;
+  }
+  .prog-text {
+    position: static;
+  }
+  .prog-text h2 {
+    display: block;
+  }
+}
+@media screen and (max-width: 375px) {
+  .prog-banner-btn button.default.white {
+    float: left;
+    width: 49%;
+  }
+  .prog-banner-btn button.default.white + * {
+    margin-left: 2%;
+  }
+}
+
+/* =============================================================================
+PROG BANNER BACKGROUND & LOGO & TEXT (TEMP IMG EDIT ME LATER)
+========================================================================== */
+
+.prog21 .prog-banner {
+  background-image: url(../img/top_banner_21n.png);
+}
+.prog21 .prog-logo2 {
+  background-image: url(../img/top_banner_21nl.png);
+}
+.prog21 .prog-text {
+  background-color: rgba(56, 146, 180, 0.75);
+}
+.prog72 .prog-logo2 {
+  background-image: url(../img/top_banner_72l.png);
+}
+.prog72 .prog-text {
+  background-color: rgba(111, 130, 148, 0.75);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25);
+}
+.prog72 .prog-banner {
+  background-position: center 40%;
+  background-image: url(../img/teddyboy.jpg);
+}
+.prog51 .prog-banner {
+  background-image: url(../img/top_banner_51n.png);
+}
+.prog51 .prog-logo2 {
+  background-image: url(../img/top_banner_51nl2.png);
+}
+.prog51 .prog-text {
+  background-color: rgba(0, 0, 0, 0.675);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25);
+}
+.prog85 .prog-banner {
+  background-image: url(../img/top_banner_85n.png);
+  background-position: 30% center;
+}
+.prog85 .prog-logo2 {
+  background-image: url(../img/top_banner_85nl.png);
+}
+.prog85 .prog-text {
+  background-color: rgba(162, 147, 93, 0.75);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 767px) {
+  .prog51 .prog-banner-btn {
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.25);
+  }
+  .prog85 .prog-banner-btn {
+    background-color: rgba(243, 153, 53, 0.75);
+  }
+  .prog85 .prog-banner-btn button.default.white {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.875);
+    color: rgba(255, 255, 255, 0.875);
+  }
+}
+@media screen and (max-width: 568px) {
+  .prog-banner .prog-text {
+    box-shadow: none !important;
+  }
+}
+
+/* =============================================================================
+PROG HOST
+========================================================================== */
+
+.prog-host {
+  padding: 0.5rem 1rem;
+  font-size: 0.75em;
+  text-align: center;
+  line-height: 1.75;
+  color: hsl(34, 3%, 70%);
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1), inset -1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px rgba(0, 0, 0, 0.1);
+}
+.prog-host .host {
+  display: inline-block;
+  position: relative;
+  color: #bea22f;
+  cursor: pointer;
+  font-weight: bold;
+}
+.prog-host .host + .host:before {
+  content: '、';
+  color: hsl(34, 3%, 70%);
+  pointer-events: none;
+}
+.prog-host .media:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #fff transparent transparent transparent;
+}
+.prog-host .media {
+  width: 8rem;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  z-index: 10;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 0.75em 0.75em;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 0.3125rem 0.75rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translateY(0.5em) translateX(-50%);
+  -moz-transform: translateY(0.5em) translateX(-50%);
+  -ms-transform: translateY(0.5em) translateX(-50%);
+  -o-transform: translateY(0.5em) translateX(-50%);
+  transform: translateY(0.5em) translateX(-50%);
+}
+.prog-host .host.active .media,
+.desktop .prog-host .host:hover .media {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.prog-host .media .imgBox {
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+}
+
+/*TEMP IMG DELETE ME LATER*/
+
+.prog-host .media#host01 .imgBox {
+  background-image: url(../img/host/Chrono.jpg);
+}
+.prog-host .media#host02 .imgBox {
+  background-image: url(../img/host/%E5%B0%8F%E8%8F%9C.jpg);
+}
+.prog-host .media .textBox {
+  font-size: 1rem;
+}
+.prog-host .media .textBox h4 {
+  line-height: 1.3125;
+}
+.prog-host .media .textBox h6 {
+  margin-top: 0.25rem;
+}
+.prog-host .media .host-social i {
+  font-size: 1.5em;
+  color: hsl(97, 3%, 50%);
+}
+.prog-host .media .host-social i:hover {
+  color: #bea22f;
+}
+.prog-host .media .host-social a + * {
+  margin-left: 0.5rem;
+}
+.prog-host .prog-host-toggle {
+  display: none;
+}
+.prog-host .media .textBox button {
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 568px) {
+  body.host-active {
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-user-select: none;
+  }
+  .mobile .dd-overlay.host-active {
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+  .mobile .prog-host .prog-host-toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    bottom: 0;
+    z-index: 1002;
+    margin: auto;
+    line-height: 11.25rem;
+    height: 11.25rem;
+    width: 40px;
+    font-size: 3em;
+    text-align: center;
+    color: hsl(97, 3%, 95%);
+  }
+  .mobile .prog-host .prog-host-toggle.next-host {
+    left: auto;
+    right: -40px;
+  }
+  .mobile .prog-host .host:first-child .prev-host {
+    display: none;
+  }
+  .mobile .prog-host .host:last-child .next-host {
+    display: none;
+  }
+  .mobile .prog-host .media:before {
+    border: none;
+  }
+  .mobile .prog-host .media {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1002;
+    width: 200px;
+    height: 11.25rem;
+    max-width: 90%;
+    margin-bottom: auto;
+    -webkit-transform: translateY(0.5em);
+    -moz-transform: translateY(0.5em);
+    -ms-transform: translateY(0.5em);
+    -o-transform: translateY(0.5em);
+    transform: translateY(0.5em);
+  }
+  .mobile .prog-host .host.active .media {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+/* =============================================================================
+PROGEP LIST
+========================================================================== */
+
+.progEp-list {
+  margin: auto -0.75em;
+}
+.progEp-list:after {
+  /* clearfix */
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+  display: table;
+  clear: both;
+}
+.progEp-list .rectAd680 {
+  clear: both;
+  margin: 1em auto;
+  padding-top: 0.75em;
+  background-color: hsl(97, 3%, 92%);
+  border: 1px solid hsl(34, 3%, 80%);
+}
+body.dark .progEp-list .rectAd680 {
+  background-color: hsl(34, 3%, 20%);
+  border-color: hsl(34, 3%, 20%);
+}
+.progEp-list .rectAd680 .adWrap img {
+  max-width: 680px;
+  max-height: 125px;
+}
+.progEp-list .rectAd680 .adInfo {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-size: 0.75em;
+  text-align: center;
+  line-height: 1;
+  color: hsl(34, 3%, 60%);
+}
+@media screen and (max-width: 1024px) {
+  .progEp-list {
+    margin: auto -0.5em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .progEp-list .rectAd680 {
+    padding-top: 0;
+    border: none;
+  }
+  .progEp-list .rectAd680 .adInfo {
+    display: none;
+  }
+}
+
+/* =============================================================================
+PROGEP MODULE & PROGEP MEDIA
+========================================================================== */
+
+.progEp-module {
+  width: 33.3333333333%;
+  float: left;
+  margin-top: 1em;
+  padding: 0 0.75em;
+}
+.progEp-module:hover .media {
+  box-shadow: 0 0.3125rem 0.75rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+/*TEMP IMG DELETE ME LATER*/
+
+.progEp-module:nth-child(1) .media .imgBox {
+  background-image: url(../img/thumbnail3.png);
+}
+.progEp-module:nth-child(2) .media .imgBox {
+  background-image: url(../img/prog51-thumbnail-2.png);
+}
+.progEp-module:nth-child(3) .media .imgBox {
+  background-image: url(../img/prog51-thumbnail-3.png);
+}
+.progEp-module:nth-child(4) .media .imgBox {
+  background-image: url(../img/prog51-thumbnail-4.png);
+}
+.progEp-module:nth-child(5) .media .imgBox {
+  background-image: url(../img/prog51-thumbnail-5.png);
+}
+.progEp-module:nth-child(6) .media .imgBox {
+  background-image: url(../img/prog51-thumbnail-6.png);
+}
+.progEp-module:nth-child(8) .media .imgBox {
+  background-image: url(../img/prog51-thumbnail-1.png);
+}
+.progEp-module.progEp-ad {
+  width: 100%;
+}
+.progEp .media.new:before {
+  content: 'NEW';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0.5rem;
+  font-size: 0.75em;
+  padding: 0.25em 0.5em;
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.5);
+  background-color: rgb(199, 169, 53);
+  color: #fff;
+}
+.progEp .media {
+  border-top: 2px solid #746551;
+  background-color: hsl(97, 3%, 92%);
+}
+body.dark .progEp .media {
+  background-color: hsl(97, 3%, 20%);
+}
+.progEp .media .imgBox {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  background-image: url(../img/thumbnail5.png);
+  background-size: cover;
+  background-color: #000;
+}
+.progEp .media .textBox {
+  height: 120px;
+  padding: 0.5em 0.75em;
+}
+.progEp .media .textBox h4 {
+  line-height: 1.375rem;
+  max-height: 6em;
+  /*js dot dot dot*/
+}
+.progEp .media .textBox h6 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  padding: 0.75rem;
+}
+.progEp .media .textBox h6 .time {
+  position: absolute;
+  right: 0.75rem;
+  margin-right: 0;
+  opacity: 0.75;
+}
+.progEp .media .textBox h6 .time i {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .progEp-module {
+    padding: 0 0.5em;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .progWrap .maxWrapper {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .progWrap .maxWrapper {
+    max-width: 90%;
+  }
+  .progEp-module {
+    width: 100%;
+  }
+  .progEp .media {
+    height: 7.875rem;
+  }
+  .progEp .media > a {
+    width: 14rem;
+  }
+  .progEp .media > a,
+  .progEp .media .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .progEp .media .textBox {
+    height: 7.875rem;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    padding-left: 14.75rem;
+  }
+  .progEp .media .textBox h6 {
+    padding-left: 14.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .progWrap .maxWrapper {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 568px) {
+  .progEp .media {
+    height: 6.75rem;
+  }
+  .progEp .media > a {
+    width: 12rem;
+  }
+  .progEp .media .textBox {
+    height: 6.75rem;
+    padding-left: 12.75rem;
+  }
+  .progEp .media .textBox h6 {
+    padding-left: 12.75rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .progEp-module {
+    width: 100%;
+  }
+  .progEp .media > a,
+  .progEp .media .imgBox {
+    width: 100%;
+    position: static;
+  }
+  .progEp .media {
+    height: auto;
+  }
+  .progEp .media .textBox {
+    height: auto;
+    padding: 0.5em 0.75em;
+  }
+  .progEp .media .textBox h4 {
+    max-height: 4em;
+    max-height: none;
+  }
+  .progEp .media .textBox h6 {
+    position: static;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+  }
+}
+
+/* =============================================================================
+PROG LIST PAGE
+========================================================================== */
+
+.dayToggle {
+  width: 100%;
+  overflow: hidden;
+  background-color: hsl(34, 3%, 15%);
+  text-align: center;
+  box-shadow: 0 0 0 1px hsl(34, 3%, 20%);
+}
+.dayToggle li {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 30px;
+  margin: 0.75em 0.5em;
+  padding: 0 0.75em;
+  border-radius: 3px;
+  color: hsl(34, 3%, 80%);
+}
+.dayToggle li:hover {
+  color: #fff;
+  background-color: hsl(34, 3%, 40%);
+}
+.dayToggle li.active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #cdb770;
+  box-shadow: inset 0 0 0 1px #bea22f;
+}
+.bodyContainer.prog {
+  background-color: hsl(34, 3%, 0%);
+}
+.bodyContainer.prog .bannerAd {
+  border-color: hsl(34, 3%, 20%);
+}
+.progList ul {
+  overflow: hidden;
+}
+.progList li {
+  width: 20%;
+  width: 16.6666666666%;
+  float: left;
+  padding: 1em;
+  padding-bottom: 1.5em;
+}
+.progList li .imgBox {
+  width: 100%;
+}
+.progList li .textBox h3 {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875em;
+  margin-top: 0.75em;
+  text-align: center;
+  color: hsl(34, 3%, 80%);
+}
+@media screen and (max-width: 1200px) {
+  .progList li {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .progList li {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .progList li {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .progList li {
+    width: 50%;
+  }
+}

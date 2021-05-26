@@ -1,0 +1,206 @@
+/* =============================================================================
+ARTICLE MAIN CONTENT
+========================================================================== */
+
+.postListHead {
+  margin: -20px 0 10px;
+  margin: 0;
+  margin: 0 0 20px;
+  padding: 40px 0 60px;
+  padding: 20px 0 40px;
+  padding: 0 0 20px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid hsl(42, 8%, 90%);
+}
+.listHeadMain {
+  width: 100%;
+  display: table;
+}
+.listHeadMain > .textBox {
+  width: 70%;
+  padding-right: 5%;
+  display: table-cell;
+  vertical-align: top;
+}
+.listHeadMain > .textBox h1 {
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin: 0 0 4px -2px;
+  font-size: 3rem;
+}
+.listHeadMain > .textBox h5 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+.listHeadMain > .textBox p {
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.listHeadMain > .imgBox {
+  display: table-cell;
+  vertical-align: top;
+  /*    height: 250px;*/
+  width: 100%;
+  background-image: url(../img/hot3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(50%) contrast(1.125) brightness(1.125);
+}
+.listHeadToggle {
+  margin: 80px 0 0 0;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.leftToggle,
+.rightToggle {
+  line-height: 1;
+  font-size: 0.675rem;
+  cursor: pointer;
+  padding: 0 1rem 0 0;
+  float: left;
+}
+.imgDotCon {
+  float: right;
+  overflow: hidden;
+}
+.imgDotCon .imgDot {
+  width: 6px;
+  height: 6px;
+  background-color: hsla(42, 8%, 30%, 0.25);
+  margin: 13px 0 13px 8px;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+.imgDotCon .imgDot.active {
+  background-color: hsla(42, 8%, 30%, 0.5);
+}
+.featPostListCon {
+  clear: both;
+  float: left;
+  overflow: auto;
+  width: 20%;
+  padding-right: 20px;
+}
+.featPostListCon .sectionHeadW {
+  margin-bottom: 0;
+}
+.featPostList {
+  width: 100%;
+  padding: 20px 0;
+}
+.featPostList + * {
+  border-top: 1px solid hsl(42, 8%, 90%);
+}
+.featPostList p {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin: 5px 0 0 0;
+}
+.mainPostList .imgBoxL,
+.featPostList img {
+  margin: 0 0 10px;
+}
+.featPostListCon h5,
+.mainPostList h5,
+.mainPostListM h5 {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+}
+.mainPostListCon {
+  padding-left: 20px;
+  width: 80%;
+  float: left;
+  overflow: auto;
+}
+.mainPostListCon .sectionHeadW {
+  margin-bottom: 10px;
+}
+.mainPostSec {
+  width: 100%;
+  overflow: auto;
+}
+.mainPostSec + * {
+  padding-top: 20px;
+}
+.mainPostList {
+  overflow: hidden;
+  padding: 15px 0;
+  border-top: 1px solid hsl(42, 8%, 90%);
+}
+.mainPostList.headPost {
+  padding: 10px 0 15px;
+  border-top: none;
+}
+.mainPostList.headPost h5 {
+  font-size: 0.8125rem;
+  line-height: 1.75;
+}
+.mainPostList p {
+  font-size: 0.8175rem;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.mainPostList.headPost p {
+  font-size: 1rem;
+  line-height: 1.675;
+}
+.mainPostList .imgBox {
+  width: 10%;
+  float: left;
+}
+.mainPostList .imgBoxL {
+  width: 100%;
+}
+.mainPostList .textBox {
+  float: left;
+  width: 90%;
+  padding-left: 15px;
+}
+.mainPostListMCon {
+  border-top: 1px solid hsl(42, 5%, 85%);
+  border-bottom: 1px solid hsl(42, 5%, 85%);
+  margin-bottom: 20px;
+  width: 100%;
+}
+.mainPostListM {
+  padding: 15px 0;
+  overflow: hidden;
+}
+.mainPostListM + * {
+  border-top: 1px solid hsl(42, 8%, 90%);
+}
+.mainPostListM h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.8175rem;
+  line-height: 1.5;
+  float: left;
+}
+.mainPostListM h5 {
+  margin: 0;
+  float: right;
+}
+.mainPostListM p {
+  font-size: 0.8175rem;
+  line-height: 1.5;
+}
+
+/* =============================================================================
+STUFF FOR MOBILE
+========================================================================== */
+@media only screen and (max-width: 1280px) {
+}
+@media only screen and (max-width: 1024px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 568px) {
+}  

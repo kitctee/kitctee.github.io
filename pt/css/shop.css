@@ -1,0 +1,75 @@
+/*    .SHOPSECTION.SPECIAL    */
+
+          .shopSection.special {}
+          .shopSection.special .maxWrapper {
+  padding: 1em;
+  background-color: hsl(97, 3%, 97%);
+}
+body.dark .shopSection.special .maxWrapper {
+  background-color: #000;
+  border-color: hsl(97, 3%, 20%);
+}
+.shop-special h3 {}
+.shop-special a {
+  display: inline-block;
+  color: #bea22f;
+}
+@media only screen and (min-width: 1024px) {
+  .shopSection.special .maxWrapper {
+    border: 1px solid hsl(97, 3%, 80%);
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .shopSection.special .maxWrapper {
+    max-width: none;
+    border-bottom: 1px solid hsl(97, 3%, 80%);
+  }
+}
+
+/*  transition  */
+
+.shopModule {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.shopInfo .imgBox {
+  -webkit-transition: background 300ms ease;
+  -moz-transition: background 300ms ease;
+  -ms-transition: background 300ms ease;
+  -o-transition: background 300ms ease;
+  transition: background 300ms ease;
+}
+
+
+
+.shopSpecial .backToPt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 1em;
+  font-size: 0.875em;
+  line-height: 2.5;
+  color: hsl(97, 3%, 95%);
+  background-color: hsl(97, 3%, 20%);
+}
+.shopSpecial {
+  min-height: 100vh;
+  background-image: url(../img/shop/p3bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.shopSpecial .maxWrapper{
+  max-width: 800px;
+}
+.shopSpecial-content {
+  padding: 3em 0;
+}
+.shopSpecial-content h1,
+.shopSpecial-content h5,
+.shopSpecial-content p {
+  text-align: center;
+  color: hsl(97, 3%, 95%);
+}

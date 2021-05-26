@@ -1,0 +1,633 @@
+.prog-post,
+.videoList {
+  display: none;
+}
+.prog-post.active,
+.videoList.active {
+  display: block;
+}
+.prog-post,
+.prog-abstract {
+  padding: 1rem;
+}
+.sideWrap.prog .sideAd {
+  width: 270px;
+}
+.sideWrap.prog .sideAd img {
+  min-width: 250px;
+  max-width: 250px;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrap.prog {
+    padding-left: 270px;
+  }
+  .sideWrap.prog {
+    width: 270px;
+    padding: 2em 0 6em;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /*
+  .bodyContainer {
+    display: table;
+  }
+  .mainWrap.prog,
+  .sideWrap.prog {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+  .mainWrap.prog {
+    width: auto;
+    padding: 0 2em 6em 0;
+  }
+  .sideWrap.prog {
+    width: 270px;
+  }
+*/
+  .bodyContainer > .maxWrapper.prog {
+    padding: 0 2rem;
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bodyContainer {
+    display: block;
+  }
+  .mainWrap.prog,
+  .sideWrap.prog {
+    display: block;
+    width: 100%;
+  }
+  .mainWrap.prog {
+    padding: 0 0 1em 0;
+    width: auto;
+  }
+}
+@media screen and (max-width: 568px) {
+  .bodyContainer > .maxWrapper.large {
+    max-width: 100%;
+    padding: 0 2em;
+    padding: 0 1em;
+  }
+  .sideWrap.prog {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.progBanner {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  height: 100px;
+}
+.progBannerCon {
+  position: relative;
+  height: 0;
+  padding-top: 25%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.progBannerCon .progBanner.cover {
+  position: absolute;
+  top: 0;
+  height: 0;
+  padding-top: 25%;
+  margin-bottom: 0;
+  background-position: center 10%;
+  background-image: url(../img/jbg.png);
+}
+.progBannerCon .maxWrapper {
+  position: relative;
+  padding-top: 25%;
+}
+
+/* =============================================================================
+PROG INFO
+========================================================================== */
+
+.prog-info {
+  position: absolute;
+  top: -25%;
+  top: 0;
+  left: 2rem;
+  width: 270px;
+  padding: 0 3em 6em 0;
+  max-width: 1280px;
+}
+.prog-info .prog-abstract {
+  position: relative;
+  padding: 0;
+}
+.prog-info .prog-profile {
+  width: 75%;
+  margin-top: -37.5%;
+  margin-bottom: 1.25rem;
+  background-color: #fff;
+  box-shadow: 0 0 0 0.3125rem #fff, 0 0.125rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.1);
+}
+.prog-info .prog-profile img {
+  -webkit-filter: none;
+  filter: none;
+}
+@media screen and (max-width: 1024px) {
+  .prog-info {
+    position: static;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .prog-info .prog-abstract {
+    padding-left: 7.5rem;
+  }
+  .prog-info .prog-profile {
+    float: left;
+    width: 6rem;
+    height: 6rem;
+    margin: -1.5rem auto 0;
+  }
+  .prog-info-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto;
+    font-size: 1em;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: hsl(48, 3%, 97%);
+    color: hsl(48, 3%, 60%);
+  }
+}
+.prog-abstract > h5 {
+  margin-top: 0.1rem;
+}
+.prog-abstract > h4 {
+  margin: 0.2rem auto 0.2rem;
+}
+.prog-host {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  padding: 1em 0;
+/*
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 3px;
+*/
+}
+.prog-host .media {
+  width: 100%;
+}
+.prog-host .media + .media {
+  padding-top: 0.75rem;
+}
+.prog-host .media .imgBox {
+  width: 2.5rem;
+}
+.prog-host .media .imgBox img {
+  border-radius: 50%;
+}
+.prog-host .textBox h4 {
+  font-size: 0.8em;
+}
+.prog-host .host-social {
+  margin-top: 0.2rem;
+}
+.prog-host .host-social i {
+  font-size: 0.8rem;
+  color: hsl(97, 3%, 60%);
+}
+.prog-host .host-social i:hover {
+  color: #000;
+}
+.prog-host button {
+  margin-top: 1.5rem;
+}
+.toggleBar {
+  overflow: hidden;
+  padding: 0 1rem;
+  height: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0 0 0.25rem 0.25rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.toggleBar button.default.flat {
+  float: none;
+  font-size: 0.8em;
+  line-height: 50px;
+}
+.toggleContent {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.videoList .videoEp {
+  overflow: hidden;
+  padding: 0 2rem;
+}
+.videoList .media {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.videoList .media:first-child {
+  border: none;
+}
+.videoList .media .bannerAd {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+}
+.videoList .media .imgBox {
+  width: 140px;
+  width: 25%;
+  position: relative;
+}
+.videoList .media .textBox h4 {
+  font-size: 1em;
+  margin: 0 0 0.2rem;
+}
+.videoList .media .textBox h6 {
+  color: hsl(97, 3%, 60%);
+}
+.videoList .media .textBox h6 span.ep {
+  padding: 0 0.25rem;
+  border: 1px solid hsl(48, 3%, 60%);
+}
+.videoList .media .textBox h6 span.new {
+  border: 1px solid rgb(199, 169, 53);
+  background-color: rgb(199, 169, 53);
+  color: #fff;
+}
+.videoList .media .textBox h6 span {
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+.videoList .media .textBox h6 span.action:hover {
+  color: rgb(199, 169, 53);
+}
+.videoSetting {
+  margin-top: 1rem;
+}
+.videoSetting h6 {
+  margin-bottom: 5px;
+}
+.videoFormat,
+.videoPart {
+  overflow: hidden;
+}
+.videoFormat {
+  margin-top: 15px;
+}
+.videoList .textBox h4 {
+  max-height: 3em;
+}
+@media screen and (max-width: 568px) {
+  .videoList .textBox h4 a {
+    max-height: 5em;
+    font-size: 0.9em;
+  }
+}
+.videoWrapper {
+  margin: 2em auto;
+}
+.topSevenRanking {
+  width: 100%;
+}
+.topSevenRanking .media {
+  width: 100%;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  overflow: visible;
+}
+.topSevenRanking .media i,
+.topSevenRanking .rank {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+.topSevenRanking .rank {
+  left: 0;
+  font-size: 0.625rem;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(199, 169, 53);
+}
+.topSevenRanking .media:nth-child(n + 5) .rank {
+  background-color: #000;
+}
+.topSevenRanking .media i {
+  right: 0;
+  font-size: 1.25rem;
+}
+.topSevenRanking .media i.fa-caret-up {
+  color: rgb(199, 169, 53);
+}
+.topSevenRanking .media i.fa-caret-down {
+  color: hsl(48, 3%, 75%);
+}
+
+/* =============================================================================
+CSS FOR MOBILE MENU
+========================================================================== */
+
+@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1024px) {
+  .prog-host,
+  .prog-abstract > h4 {
+    display: none;
+  }
+  .progBannerCon {
+    height: auto;
+    padding-top: 0;
+    background-color: #fff;
+  }
+  .progBannerCon .maxWrapper {
+    max-width: 100%;
+  }
+  .toggleBar {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .videoList .videoEp {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 568px) {
+  .videoList .media {
+    padding: 1.25rem 0;
+  }
+  .videoList .media .imgBox {
+    width: 100px;
+    width: 30%;
+  }
+  .videoList .media .textBox h6 span {
+    margin-top: 0.1rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .progBanner {
+    display: none;
+  }
+  .progBannerCon .maxWrapper {
+    padding-top: 0;
+  }
+  .prog-info .prog-abstract {
+    padding-left: 0;
+  }
+  .prog-info .prog-profile {
+    display: none;
+  }
+  .videoList .media {
+    padding: 1rem 0;
+  }
+  .videoList .media .textBox .date {
+    display: none;
+  }
+}
+@media screen and (max-width: 319px) {
+  .videoList .media .imgBox {
+    display: none;
+  }
+  .videoList .media .textBox {
+    padding: 0;
+  }
+}
+.prog2 {
+  background-image: url(../img/top_banner_2.jpeg);
+}
+.prog3 {
+  background-image: url(../img/top_banner_3.jpeg);
+}
+.prog4 {
+  background-image: url(../img/top_banner_4.jpeg);
+}
+.prog5 {
+  background-image: url(../img/top_banner_5.jpeg);
+}
+.prog7 {
+  background-image: url(../img/top_banner_7.jpeg);
+}
+.prog12 {
+  background-image: url(../img/top_banner_12.jpeg);
+}
+.prog13 {
+  background-image: url(../img/top_banner_13.jpeg);
+}
+.prog14 {
+  background-image: url(../img/top_banner_14.jpeg);
+}
+.prog15 {
+  background-image: url(../img/top_banner_15.jpeg);
+}
+.prog21 {
+  background-image: url(../img/top_banner_21.jpeg);
+}
+.prog23 {
+  background-image: url(../img/top_banner_23.jpeg);
+}
+.prog33 {
+  background-image: url(../img/top_banner_33.jpeg);
+}
+.prog34 {
+  background-image: url(../img/top_banner_34.jpeg);
+}
+.prog42 {
+  background-image: url(../img/top_banner_42.jpeg);
+}
+.prog43 {
+  background-image: url(../img/top_banner_43.jpeg);
+}
+.prog51 {
+  background-image: url(../img/top_banner_51.jpeg);
+}
+.prog52 {
+  background-image: url(../img/top_banner_52.jpeg);
+}
+.prog61 {
+  background-image: url(../img/top_banner_61.jpeg);
+}
+.prog62 {
+  background-image: url(../img/top_banner_62.jpeg);
+}
+.prog71 {
+  background-image: url(../img/top_banner_71.jpeg);
+}
+.prog83 {
+  background-image: url(../img/top_banner_83.jpeg);
+}
+.prog85 {
+  background-image: url(../img/top_banner_85.jpeg);
+}
+
+/*
+.progList {
+  margin-top: 3rem;
+}
+.progList h5 {
+  margin-bottom: 0.75rem;
+}
+.progList li {
+  overflow: hidden;
+  font-size: 0.875em;
+  line-height: 1.5rem;
+  padding: 0.5em 0;
+}
+.progList li span {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  float: left;
+  margin: 0 0.5rem 0 0;
+  background-image: url(../img/prog_logo.png);
+  background-size: cover;
+}
+.progList li span.prog2 {
+  background-image: url(../img/prog_logo2.png);
+}
+.progList li span.prog5 {
+  background-image: url(../img/prog_logo5.png);
+}
+.progList li span.prog7 {
+  background-image: url(../img/prog_logo7.png);
+}
+.progList li span.prog13 {
+  background-image: url(../img/prog_logo13.png);
+}
+.progList li span.prog51 {
+  background-image: url(../img/prog_logo51.png);
+}
+.progList li span.prog83 {
+  background-image: url(../img/prog_logo83.png);
+}
+.progList li span.prog85 {
+  background-image: url(../img/prog_logo85.png);
+}
+.progList .moreProg {
+  display: none;
+}
+.progList .moreProg.active {
+  display: block;
+}
+.progList button {
+  margin-top: 0.75rem;
+}
+*/
+
+.dayToggle {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  background-color: hsl(34, 3%, 15%);
+  text-align: center;
+  box-shadow: 0 0 0 1px hsl(34, 3%, 20%);
+}
+.dayToggle li {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0.75em 0.5em;
+  padding: 0 0.75em;
+  border-radius: 3px;
+  color: hsl(34, 3%, 80%);
+}
+.dayToggle li.active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #cdb770;
+  box-shadow: inset 0 0 0 1px #bea22f;
+}
+.bodyContainer.prog {
+  background-color: hsl(34, 3%, 0%);
+}
+.bodyContainer.prog .bannerAd {
+  border-color: hsl(34, 3%, 20%);
+}
+.progList ul {
+  overflow: hidden;
+}
+.progList li {
+  width: 20%;
+  width: 16.6666666666%;
+  /*    width: 25%;*/
+  float: left;
+  padding: 1em;
+  padding-bottom: 1.5em;
+}
+.progList li .imgBox {
+  width: 100%;
+}
+.progList li .imgBox img {
+  position: relative;
+  z-index: 2;
+}
+.progList li .progBg {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  padding: 50%;
+  z-index: 1;
+  background-size: cover;
+  background-position: 20% center;
+  opacity: 0.625;
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.progList li:hover .progBg {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.progList li .progBg.prog13 {
+  background-position: center;
+}
+.progList li .progBg.prog4 {
+  background: #4472ae;
+}
+.progList li .textBox h3 {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875em;
+  margin-top: 0.75em;
+  text-align: center;
+  color: hsl(34, 3%, 80%);
+}
+@media screen and (max-width: 1200px) {
+  .progList li {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .progList li {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .progList li {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .progList li {
+    width: 50%;
+  }
+}

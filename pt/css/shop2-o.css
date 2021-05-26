@@ -1,0 +1,497 @@
+/*    SHOPIMG BACKGROUND-IMAGE    */
+
+/*    DVD    */
+
+.d-dvd3      .shopImg {background-image: url(../img/shop/d-dvd3.jpg);}
+.d-dvd2      .shopImg {background-image: url(../img/shop/d-dvd2.jpg);}
+.d-dvd1      .shopImg {background-image: url(../img/shop/d-dvd1.jpg);}
+
+/*    PRODUCT    */
+
+.p-2015c      .shopImg {background-image: url(../img/shop/p-2015c.png);}
+.p-minibrick2 .shopImg {background-image: url(../img/shop/p-minibrick2.png);}
+.p-poster100  .shopImg {background-image: url(../img/shop/p-poster100.jpg);}
+.p-ptbag      .shopImg {background-image: url(../img/shop/p-ptbag.png);}
+.p-tote       .shopImg {background-image: url(../img/shop/p-tote.png);}
+.p-penbag     .shopImg {background-image: url(../img/shop/p-penbag.png);}
+.p-cpbag      .shopImg {background-image: url(../img/shop/p-cpbag.png);}
+.p-badges2    .shopImg {background-image: url(../img/shop/p-badges2.jpg);}
+.p-badges3    .shopImg {background-image: url(../img/shop/p-badges3.jpg);}
+.p-tag        .shopImg {background-image: url(../img/shop/p-tag.png);}
+
+/*    CLOTHING    */
+
+.t-pts-otk200 .shopImg {background-image: url(../img/shop/t-pts-otk200.png);}
+.t-pts-mmcap  .shopImg {background-image: url(../img/shop/t-pts-mmcap.png);}
+.t-hotdog     .shopImg {background-image: url(../img/shop/t-hotdog.png);}
+
+/*    SUBSCRIBE    */
+
+.s-pteens .shopImg {background-image: url(../img/shop/s-pteens.jpg);}
+.s-ptimes .shopImg {background-image: url(../img/shop/s-ptimes.jpg);}
+
+/*    BOOK    */
+
+.b-mm6    .shopImg {background-image: url(../img/shop/b-mm6.jpg);}
+.b-mm5    .shopImg {background-image: url(../img/shop/b-mm5.jpg);}
+.b-mm4    .shopImg {background-image: url(../img/shop/b-mm4.jpg);}
+.b-mm3    .shopImg {background-image: url(../img/shop/b-mm3.jpg);}
+.b-mm2    .shopImg {background-image: url(../img/shop/b-mm2.jpg);}
+.b-mm1    .shopImg {background-image: url(../img/shop/b-mm1.jpg);}
+.b-urfail .shopImg {background-image: url(../img/shop/b-urfail.jpg);}
+.b-kh2    .shopImg {background-image: url(../img/shop/b-kh2.jpg);}
+.b-kh1    .shopImg {background-image: url(../img/shop/b-kh1.jpg);}
+.b-tb3    .shopImg {background-image: url(../img/shop/b-tb3.jpg);}
+.b-tb2    .shopImg {background-image: url(../img/shop/b-tb2.jpg);}
+.b-tb1    .shopImg {background-image: url(../img/shop/b-tb1.jpg);}
+.b-ghost1 .shopImg {background-image: url(../img/shop/b-ghost1.jpg);}
+.b-msc2   .shopImg {background-image: url(../img/shop/b-msc2.jpg);}
+.b-msc1   .shopImg {background-image: url(../img/shop/b-msc1.jpg);}
+
+/*    COMICS    */
+
+.c-mmc3   .shopImg {background-image: url(../img/shop/c-mmc3.jpg);}
+.c-mmc2   .shopImg {background-image: url(../img/shop/c-mmc2.jpg);}
+.c-mmc1   .shopImg {background-image: url(../img/shop/c-mmc1.jpg);}
+.c-plc2   .shopImg {background-image: url(../img/shop/c-plc2.jpg);}
+.c-plc1   .shopImg {background-image: url(../img/shop/c-plc1.jpg);}
+.c-today1 .shopImg {background-image: url(../img/shop/c-today1.jpg);}
+
+
+/* =============================================================================
+   SHOP-SLIDER
+   ========================================================================== */
+
+.shop-slider {
+  width: 100%;
+  margin: auto;
+}
+.shop-slider-item {
+  position: relative;
+  height: 0;
+  padding-top: 360px;
+  background-size: cover;
+}
+.shop-slider-item .shop-slider-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.shop-slider-item.b-kh2 {
+  background-color: #5fa59d;
+}
+.shop-slider-item.b-kh2 .shop-slider-bg {
+  background-image: url(../img/shop/b-kh2-f3-w2.png);
+}
+.shop-slider-item.b-tb2 {
+  background-image: url(../img/shop/b-tb-bg.jpg);
+}
+.shop-slider-item.b-tb2 .shop-slider-bg {
+  background-image: url(../img/shop/b-tb2-f.png);
+}
+.shop-slider-item.b-mm2 {
+  background-color: #fff;
+}
+.shop-slider-item.b-mm2:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  background-color: #000;
+}
+.shop-slider-item.b-mm2 .shop-slider-bg {
+  background-image: url(../img/shop/b-mm2-f.jpg);
+}
+.shop-slider-item.b-urfail {
+/*  background-image: url(../img/shop/b-tb-bg.jpg);*/
+  background-color: #000;
+}
+.shop-slider-item.b-urfail .shop-slider-bg {
+  background-image: url(../img/shop/b-urfail-bg.png);
+}
+
+@media only screen and (max-width: 1024px) {
+  .shop-slider-item {
+    padding-top: 10%;
+/*    outline: 1px solid lime;*/
+  }
+}
+
+/* =============================================================================
+   SHOPSECTION
+   ========================================================================== */
+
+.shopSection {
+  padding-top: 3rem;
+}
+.shopSection:last-child {
+  padding-bottom: 3rem;
+}
+.shopSection.list {}
+
+
+@media only screen and (max-width: 767px) {
+  .shopSection,
+  .shopSection:last-child {
+    padding: 0;
+    margin: auto -1rem;
+  }
+}
+
+/*    .shopSection .shopModule-wrap-con    */
+
+.shopModule-wrap-con {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.shopModule-wrap-con:after {
+  /* clearfix */
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+  display: table;
+  clear: both;
+}
+
+/*    .shopSection inner    */
+
+.shopSection .shopSection-title > span {
+  font-size: 1rem;
+  color: hsl(34, 3%, 60%);
+}
+.shopSection .shopSection-title {
+  font-size: 1.71875rem;
+  line-height: 50px;
+  border-bottom: 1px solid hsl(97, 3%, 80%);
+}
+.shopSection .shopModule-wrap {
+  float: left;
+  padding: 1rem;
+}
+.shopSection.grid5 .shopModule-wrap {
+  width: 20%;
+}
+.shopSection.grid5 .shopModule-wrap:nth-child(5n+1) {
+  clear: both;
+}
+.shopSection.book .shopModule-wrap {
+  width: 16.6666666666%;
+}
+.shopSection.large .shopModule-wrap {
+  width: 33.3333333333%;
+}
+.shopSection.white {
+  background-color: #fff;
+  padding-bottom: 3rem;
+}
+.shopSection.large.white .imgBox {
+  background-color: hsl(97, 3%, 95%);
+}
+.shopSection.large .imgBox {
+  background-color: hsl(97, 3%, 92%);
+  padding-top: 100%;
+}
+.shopSection.large .shopModule-wrap .shopModule .imgBox .shopImg {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .shopModule-wrap-con {
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .shopSection .shopSection-title {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+  .shopSection.mobile-grid .shopModule-wrap {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  .shopSection.large.white .imgBox,
+  .shopSection.large .imgBox,
+  .shopSection .imgBox {
+    background-color: transparent;
+  }
+  .shopSection.mobile-grid .imgBox {
+    float: left;
+    width: 60px;
+    height: 60px;
+    padding-top: 0;
+  }
+  .shopSection.mobile-grid .imgBox .shopImg {
+    height: 0;
+    padding-top: 100%;
+  }
+  .shopSection.mobile-grid .textBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 4.75rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+    .shopSection.mobile-grid .shopModule .textBox h5,
+    .shopSection.mobile-grid .shopModule .textBox h4 {
+      text-align: left;
+  }
+}
+
+/*    .shopSection-toggle    */
+
+.shopSection h2 + .shopSection-toggle {
+  margin-top: 1rem;
+}
+.shopSection-toggle {}
+.shopSection-toggle.self {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid hsl(97, 3%, 80%);
+}
+.shopSection-toggle:after {
+  /* clearfix */
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+  display: table;
+  clear: both;
+}
+.shopSection-toggle li {
+  float: left;
+  font-size: 0.875rem;
+  line-height: 2;
+  padding: 0 0.625em;
+  color: hsl(34, 3%, 30%);
+  background-color: hsl(97, 3%, 92%);
+  font-weight: bold;
+  cursor: pointer;
+}
+.shopSection-toggle li.active {
+  color: hsl(97, 3%, 95%);
+  background-color: #bea22f;
+}
+.shopSection-toggle li ~ li {
+  margin-left: 1em;
+}
+
+/*    .SHOPSECTION.SPECIAL    */
+
+.shopSection.special {
+  background-image: url(../img/shop/p3bg2.jpg);
+  background-size: cover;
+  padding: 2em;
+}
+.shopSection.special .maxWrapper {
+  max-width: 800px;
+  padding: 0;
+}
+.shopSection.special h1,
+.shopSection.special h5,
+.shopSection.special p {
+  text-align: center;
+  color: hsl(97, 3%, 95%);
+}
+.shopSection.special h1 {
+  margin-bottom: 0.25em;
+}
+.shopSection.special p {
+  margin-bottom: 0.25em;
+  line-height: 1.5rem;
+}
+.shopSection.special h5 {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.5rem;
+  color: hsl(97, 3%, 70%);
+}
+.shopSection.special .btnCon {
+  margin-top: 1rem;
+}
+
+/*    .SHOPMODULE    */
+
+.shopModule .imgBox:hover .shopImg {
+  opacity: 0.25;
+}
+.shopModule .imgBox {
+  position: relative;
+  height: 0;
+  padding-top: 130%;
+  padding-top: 125%;
+  background-color: hsl(97, 3%, 92%);
+}
+.shopModule .imgBox .shopImg {
+  max-width: 80%;
+  max-height: 80%;
+}
+.book .shopModule .imgBox {
+  background-color: transparent;
+}
+.book .shopModule .imgBox .shopImg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.shopModule .imgBox .shopImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.shopModule .textBox {}
+.shopModule .textBox h4 {
+  margin-top: 0.5em;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.375;
+}
+.shopModule .textBox h4 span {
+  display: block;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: hsl(97, 3%, 30%);
+}
+.shopModule .textBox h5 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .shopModule .textBox h4 {
+    margin-top: auto;
+  }
+}
+
+/*    .SHOPSECTION.B-MM    */
+
+.shopSection.b-mm {
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/shop/b-mm-bg2.jpg);
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+.shopSection.b-mm .b-mm-logo {
+  width: 240px;
+  margin: auto;
+  padding: 2em 0;
+}
+.shopSection.b-mm .maxWrapper {
+  border-top: 5px solid #9e9f5b;
+  background-color: hsla(0, 0%, 0%, 0.875);
+}
+.shopSection.b-mm .shopModule .shopImg-icon i {
+  color: hsl(97, 3%, 95%);
+}
+.shopSection.b-mm .shopModule .textBox h4 {
+  color: hsl(97, 3%, 95%);
+}
+.shopSection.b-mm .shopModule .textBox h4 span {
+  color: hsl(97, 3%, 70%);
+}
+
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 568px) {}
+
+/*  .media .shopImg-overlay  */
+
+.shopImg-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  border-radius: 3px;
+  color: hsl(34, 3%, 30%);
+  cursor: pointer;
+}
+.shopImg-icon i {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.media .shopImg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  opacity: 0;
+  background-color: transparent;
+  pointer-events: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.shopModule .imgBox:hover .shopImg-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.shopModule .shopImg-overlay span {
+  display: inline-block;
+  margin: auto;
+  font-size: 2em;
+  font-size: 0.75em;
+  line-height: 1;
+  line-height: 2.5;
+  width: 2.5em;
+  width: 100%;
+  width: auto;
+  border-radius: 3px;
+  padding: 0 1em;
+  text-align: center;
+  color: hsl(34, 3%, 30%);
+  font-weight: bold;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.shopModule .shopImg-overlay span ~ span {
+  margin-top: 0.75em;
+}
+.shopModule .imgBox img,
+.shopModule .imgBox .shopImg,
+.shopModule .shopImg-overlay,
+.shopModule .shopImg-overlay span {
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  -webkit-transition: all 400ms cubic-bezier(0.75, 0.10, 0.10, 1.000);
+  -moz-transition: all 400ms cubic-bezier(0.75, 0.10, 0.10, 1.000);
+  -ms-transition: all 400ms cubic-bezier(0.75, 0.10, 0.10, 1.000);
+  -o-transition: all 400ms cubic-bezier(0.75, 0.10, 0.10, 1.000);
+  transition: all 400ms cubic-bezier(0.75, 0.10, 0.10, 1.000);
+  /*custom cubic-bezier*/
+}

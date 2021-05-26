@@ -1,0 +1,564 @@
+/*
+.shopInfo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11000;
+  width: 85%;
+  max-width: 1000px;
+  height: 85%;
+  max-height: 720px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5em rgba(0, 0, 0, 0.5), 0 0 1em rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(2em) translateZ(0) scale(0.8);
+  -moz-transform: translateY(2em) translateZ(0) scale(0.8);
+  -ms-transform: translateY(2em) translateZ(0) scale(0.8);
+  -o-transform: translateY(2em) translateZ(0) scale(0.8);
+  transform: translateY(2em) translateZ(0) scale(0.8);
+}
+.shopInfo.active {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0) translateZ(0) scale(1);
+  -moz-transform: translateY(0) translateZ(0) scale(1);
+  -ms-transform: translateY(0) translateZ(0) scale(1);
+  -o-transform: translateY(0) translateZ(0) scale(1);
+  transform: translateY(0) translateZ(0) scale(1);
+}
+*/
+.shop-exit {
+  display: none;
+}
+
+/* =============================================================================
+   SHOPINFO
+   ========================================================================== */
+
+
+/*
+.shopSection.shopInfo {
+  border: 1px solid lime;
+  box-shadow: inset 0 0 1em lime;
+}
+.shopInfo {
+  border: 1px solid blue;
+  box-shadow: inset 0 0 1em blue;
+}
+.shopInfo .shopModule-wrap {
+  border: 1px solid orange;
+  box-shadow: inset 0 0 1em orange;
+}
+.shopInfo .shopModule-wrap .shopModule {
+  border: 1px solid cyan;
+  box-shadow: inset 0 0 1em cyan;
+}
+.shopInfo .shopModule-wrap .shopModule .media {
+  border: 1px solid gold;
+  box-shadow: inset 0 0 1em gold;
+}
+.shopInfo .shopModule-wrap .shopModule .imgBox {
+  border: 1px solid green;
+  box-shadow: inset 0 0 1em green;
+}
+.shopInfo .shopModule-wrap .shopModule .textBox {
+  border: 1px solid green;
+  box-shadow: inset 0 0 1em green;
+}
+.shopInfo .shopModule-wrap .shopModule .shopInfo-body {
+  border: 1px solid green;
+  box-shadow: inset 0 0 1em green;
+}
+*/
+
+/*    SHOPSECTION.shopInfo    */
+
+.shopSection.shopInfo {
+  padding: 3rem 0;
+  border-bottom: 1px solid hsl(97, 3%, 80%);
+  background-color: hsl(97, 3%, 92%);
+}
+body.dark .shopSection.shopInfo {
+  border-color: hsl(97, 3%, 20%);
+  background-color: hsl(97, 3%, 0%);
+}
+.shopInfo .maxWrapper {
+  max-width: 800px;
+  max-width: 1024px;
+}
+
+/*    .SHOPINFO .SHOPMODULE-WRAP    */
+
+.shopInfo .shopModule-wrap {
+  width: 100%;
+}
+.shopInfo .shopModule .media {}
+.shopInfo .shopModule .textBox,
+.shopInfo .shopModule .imgBox {
+  float: left;
+  width: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .shopInfo .shopModule-wrap {
+    padding: 0;
+  }
+}
+
+/*    .SHOPINFO .SHOPMODULE .IMGBOX    */
+
+.shopInfo .shopModule .imgBox {
+  height: auto;
+  padding-top: 0;
+  background-color: transparent;
+}
+.shopInfo .shopModule .imgBox .shopImg {
+  position: static;
+  height: 0;
+  padding-top: 100%;
+}
+.shopInfo .shopModule .imgBox:hover .shopImg {
+  opacity: 1;
+}
+
+/*    .SHOPINFO .SHOPMODULE .TEXTBOX    */
+
+.shopInfo .shopModule .textBox {
+  padding-left: 1.5rem;
+}
+.shopInfo .shopModule .textBox h2 {}
+.shopInfo .shopModule .textBox h4 {
+  margin-top: 0.25em;
+  font-weight: normal;
+  text-align: left;
+}
+.shopInfo .shopModule .textBox > h5 {
+  margin-top: 1em;
+  text-align: left;
+}
+.shopInfo .shopModule .textBox .select-type {
+  width: 100px;
+  font-size: 1rem;
+}
+.shopInfo .shopModule .shop-price {
+  margin-top: 1em;
+  font-size: 1.25em;
+  line-height: 1;
+}
+.shopInfo .shopModule .shop-price > .price-addon {
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+.shopInfo .shopModule .shop-price > .price-addon:before {
+  content: '+';
+}
+body.dark .shopInfo .shopModule .shop-price {
+  color: hsl(97, 3%, 95%);
+}
+
+/*    .SHOPINFO-BODY    */
+
+.shopInfo-body {
+  padding-top: 2rem;
+}
+.shopInfo-body a {
+  color: #bea22f;
+  font-weight: bold;
+}
+.shopInfo-header {
+  position: relative;
+  line-height: 60px;
+  border-top: 1px solid hsl(97, 3%, 80%);
+  cursor: pointer;
+}
+.shopInfo-header > i {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  font-size: 1.375rem;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+.shopInfo-header + .shopInfo-content {
+  display: none;
+}
+.shopInfo-header.active + .shopInfo-content {
+  display: block;
+}
+.shopInfo-header.active > i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.shopInfo-content {
+  margin-bottom: 1.75rem;
+}
+.shopInfo-content h3 + p {
+  margin-top: 1em;
+}
+.shopInfo .shopModule .textBox .shopInfo-content h4 {
+  font-weight: bold;
+}
+.shopInfo-content p {
+  font-size: 0.875em;
+}
+.shopInfo-content p + p {
+  margin-top: 0.75em;
+}
+.shopInfo-content p + h6 {
+  position: relative;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  font-size: 0.875em;
+}
+.shopInfo-content p + h6:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 1px solid hsl(97, 3%, 80%);
+  width: 1.5rem;
+}
+
+/*    .SHOPINFO-TABLE    */
+
+.shopInfo-table {
+  color: hsl(34, 3%, 20%);
+}
+.shopInfo-table .table-row ~ .table-row {
+  margin-top: 1em;
+}
+.shopInfo-table .table-row h4 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.shopInfo-table .cell {
+  position: relative;
+  padding-left: 70px;
+  line-height: 1.625;
+}
+.shopInfo-table.wide-header .cell {
+  padding-left: 150px;
+}
+.shopInfo-table .cell ~ .cell {
+  margin-top: 0.5em;
+}
+.shopInfo-table .cell .header {
+  position: absolute;
+  left: 0;
+}
+.shopInfo-table .cell .shopName:after {
+  content: '｜';
+  opacity: 0.25;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .shopSection.shopInfo {
+    padding: 0;
+  }
+  .shopSection.shopInfo .shopModule-wrap {
+    float: none;
+  }
+  .shopInfo .shopModule .imgBox {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+  .shopInfo .shopModule .textBox {
+    clear: both;
+    width: 100%;
+    padding: 0;
+  }
+  .shopInfo .shopModule .shop-body {
+    position: absolute;
+    top: 0;
+/*    margin-top: 1rem;*/
+    padding-left: 7.25rem;
+    height: 6.25rem;
+  }
+  .shopInfo .shopModule .textBox h2 {
+    font-size: 1em;
+  }
+  .shopInfo .shopModule .textBox h4 {
+    margin-top: 0.125em;
+  }
+  .shopInfo .shopModule .shop-price {
+    margin-top: 0.75em;
+    font-size: 1em;
+  }
+  body.dark .shopInfo .shop-option-wrap,
+  .shopInfo .shop-option-wrap {
+    font-size: 1em;
+    box-shadow: none;
+    border-radius: 0;
+    border-top: 1px solid hsl(97, 3%, 80%);
+    padding: 0.75rem 1rem;
+/*    margin: 1rem -1rem 0;*/
+  }
+  .shopInfo .shop-option-wrap button.xlBtn {
+    padding: 0 1em;
+    font-size: 0.9em;
+    line-height: 40px;
+  }
+  .shopInfo .shopInfo-body {
+    padding: 0;
+    font-size: 1rem;
+  }
+  .shopInfo .shopInfo-body > .shopInfo-header {
+    line-height: 50px;
+  }
+  .shopInfo .shopInfo-body > .shopInfo-header > i {
+    line-height: 50px;
+  }
+  .shopInfo .shopInfo-body > .shopInfo-header,
+  .shopInfo .shopInfo-body .shopInfo-table,
+  .shopInfo .shopInfo-body .shopInfo-content {
+    padding: 0 1rem;
+  }
+  .shopInfo-content p,
+  .shopInfo-table {
+    font-size: 1em;
+  }
+  
+
+}
+
+/* =============================================================================
+   .SPECIAL-OFFER-WRAP & .SHOP-OPTION-WRAP
+   ========================================================================== */
+
+.special-offer-wrap + .shop-option-wrap {
+  display: none;
+}
+.special-offer-wrap:after,
+.shop-option-wrap:after {
+  /* clearfix */
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+  display: table;
+  clear: both;
+}
+.special-offer-wrap,
+.shop-option-wrap {
+  clear: both;
+  margin-top: 1em;
+  padding: 0.75em;
+  border-radius: 3px;
+  background-color: hsl(34, 3%, 95%);
+  box-shadow: inset 0 0 0 1px hsl(34, 3%, 80%);
+  color: hsl(34, 3%, 30%);
+}
+body.dark .special-offer-wrap,
+body.dark .shop-option-wrap {
+  background-color: hsl(34, 3%, 10%);
+  box-shadow: inset 0 0 0 1px hsl(34, 3%, 20%);
+}
+label.special-type,
+label.special-offer,
+label.select-size,
+label.select-type,
+label.select-quantity {
+  outline: 1px solid lime;
+  float: left;
+  position: relative;
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 0.875em;
+  line-height: 32px;
+}
+body.dark label.special-type,
+body.dark label.special-offer,
+body.dark label.select-size,
+body.dark label.select-type,
+body.dark label.select-quantity {
+  color: #fff;
+}
+label.select-size,
+label.select-quantity {  
+  width: 114px;
+}
+label.select-size select,
+label.select-quantity select {
+  float: right;
+}
+label.select-quantity input {
+  display: none;
+  float: right;
+  width: 74px;
+  padding: 6px 10px;
+  line-height: 20px;
+  background-color: hsl(97, 3%, 92%);
+}
+
+label.special-offer span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875em;
+  line-height: 1;
+  color: hsl(34, 3%, 50%);
+}
+label.special-offer span i {
+  cursor: help;
+}
+label.special-offer input {
+  float: left;
+  display: block;
+  width: 180px;
+  margin-right: 1rem;
+  padding: 10px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: hsl(97, 3%, 92%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+body.dark label.special-offer input {
+  box-shadow: inset 0 0 0 1px hsl(34, 3%, 20%);
+  background-color: hsl(97, 3%, 20%);
+}
+body.dark label.special-offer input:focus {
+  box-shadow: inset 0 0 0 1px #bea22f;
+}
+label.special-offer.failed input {
+  box-shadow: inset 0 0 0 2px hsl(5, 65%, 65%);
+}
+label.special-offer button {
+  margin-right: auto;
+}
+label.special-offer .caption {
+  float: left;
+  clear: both;
+  margin-top: 0.375rem;
+}
+label.special-offer .caption.fail {
+  color: hsl(5, 65%, 65%);
+}
+
+/*    .SHOP-OPTION    */
+
+.shop-option:after {
+  /* clearfix */
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+  display: table;
+  clear: both;
+}
+.shop-option {
+  display: none;
+}
+.shop-option.active {
+  display: block;
+}
+.shop-option > .caption {
+  clear: both;
+  float: left;
+  text-align: left;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.shop-option > .caption:hover {
+  text-decoration: underline;
+}
+.size-wrap {
+  float: left;
+  overflow: hidden;
+}
+.size-label {
+  float: left;
+  margin-top: 0.5em;
+  margin-right: 0.75em;
+  line-height: 30px;
+  font-weight: bold;
+  color: hsl(34, 3%, 50%);
+}
+body.dark .size-label {
+  color: #fff;
+}
+
+/*    SHOP-OPTION-SPECIAL    */
+
+.shop-option-special {
+  overflow: hidden;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-top: 1px solid hsl(34, 3%, 80%);
+}
+body.dark .shop-option-special {
+  border-color: hsl(34, 3%, 20%);
+}
+.shop-option-special fieldset {
+  font-size: 0.875em;
+  font-weight: bold;
+}
+.shop-option-special .select {
+  margin-top: 0.25rem;
+  margin-left: 1.5rem;
+}
+
+
+/*    .SHOPINFO .BTNCON    */
+
+.shopInfo .btnCon {
+  clear: both;
+  margin-top: 0.5em;
+  border-top: 1px solid hsl(34, 3%, 80%);
+}
+.shopInfo .btnCon > button {
+  margin: auto;
+  margin-top: 0.5em;
+  width: 100% !important;
+}
+
+/*  transition  */
+
+.shopModule {
+  -webkit-transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -moz-transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -o-transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  /* easeOutExpo */
+}
+.shopModule {
+  -webkit-transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  -moz-transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  -o-transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  /* easeOutExpo */
+}
+.shopInfo {
+  -webkit-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  -moz-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  -o-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000), top 0s, left 0s;
+  /* easeOutExpo */
+}
+
+/*.shopInfo,*/
+
+.shop-exit,
+.media.shop,
+.hostInfo,
+.shopModule .media.shop .imgBox,
+.shop-detailToggle,
+.shopInfo .imgBox,
+.shopInfo .textBox,
+.imgBox-toggle,
+.imgBox-toggle i,
+.raise-select {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
