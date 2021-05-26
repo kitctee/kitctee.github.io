@@ -52,21 +52,21 @@ $(document).ready(function () {
 
   function checkWidth() {
     var windowsize = $window.width();
-    if (windowsize > 768) { }
-    if (windowsize < 768) { }
-    if (windowsize > 1024) { }
-    if (windowsize < 1024) { }
+    // if (windowsize > 768) { }
+    // if (windowsize < 768) { }
+    // if (windowsize > 1024) { }
+    // if (windowsize < 1024) { }
 
     $(window).scroll(function () {
       var footer_top = $('#footer').offset().top;
       var raiseAction = $('#raiseActionBar');
       var raiseAction_top = raiseAction.offset().top;
-      var raise_top = $('#raise').offset().top - 400;
+      var raise_top = $('#raise').offset().top - windowH * 0.5;
 
       var windowpos = $(window).scrollTop();
       var windowpos2 = windowpos + windowH;
 
-      if (windowpos > (raise_top - windowH + 400 + 100)) {
+      if (windowpos > (raise_top - windowH + (windowH * 0.5) + 100)) {
         raiseAction.addClass('active');
       } else {
         raiseAction.removeClass('active');

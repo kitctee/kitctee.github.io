@@ -161,9 +161,9 @@ body.dark .raise-class .media .textBox h5 {
  ========================================================================== */
 .raise-topSeven {
   text-align: center;
-  padding: 4em 0;
+  padding: 2em 0 4em;
   border-bottom: 1px solid #ccceca;
-  background-image: url(../img/raise-06%20copy.png);
+  background-image: url(../img/raise_bg_2021_@2x.png);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -380,33 +380,34 @@ body.dark .topSeven-text h5 {
 }
 
 .ranking-wrap .media .rank {
-  width: 2em;
-  height: 2em;
+  width: -webkit-calc(2em + 2px);
+  width: -moz-calc(2em + 2px);
+  width: calc(2em + 2px);
+  height: -webkit-calc(2em + 2px);
+  height: -moz-calc(2em + 2px);
+  height: calc(2em + 2px);
   margin: auto;
-  font-size: 0.75em;
+  font-size: 0.8em;
   font-weight: bold;
   line-height: 2;
   color: #f3b411;
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 0 2px #f3b411;
-     -moz-box-shadow: inset 0 0 0 2px #f3b411;
-          box-shadow: inset 0 0 0 2px #f3b411;
+  border: 1px solid #f3b411;
 }
 
 .ranking-wrap .media:nth-child(n + 4) .rank {
   color: #989c96;
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
+  font-weight: normal;
+  border: none;
 }
 
 .ranking-wrap .media .imgBox {
   display: block;
   width: 72px;
   height: 72px;
-  margin: 0.75em auto;
+  margin: 0.5em auto;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
