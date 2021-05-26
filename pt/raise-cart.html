@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/cart_v1.1.css">
 <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'></head>
 
 <body class="raiseCart">
@@ -2290,13 +2290,41 @@
           <h5 class="cart-info">已選取 4 位主持／文青</h5>
         </div>
         <div class="cart-main" id="cartList-main">
-          <ul class="cart-header">
+          <!-- <ul class="cart-header">
             <li class="rc-host">主持</li>
             <li class="rc-comment">留言</li>
             <li class="rc-value">課金額</li>
-          </ul>
+          </ul> -->
           <div class="cartModule-wrap raiseCart">
             <div class="cartModule batch">
+              <div class="media">
+                <div class="cart-fieldset">
+                  <div class="cart-raiseType">
+                    <div class="pt-switch">
+                      <input id="raiseType00" type="checkbox">
+                      <label for="raiseType00" onclick="switchType()"></label>
+                      <div class="switch-text left">月供</div>
+                      <div class="switch-text right">單次</div>
+                      <div class="pt-switch sub-switch">
+                        <input id="raiseLength00" type="checkbox">
+                        <label for="raiseLength00" onclick="switchPeriod()"></label>
+                        <div class="switch-text left">半年</div>
+                        <div class="switch-text right">一年</div>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" id="period" name="period" value="1">
+                  <div class="cart-value">
+                    <input value="100" type="tel" min="100" onchange="update()" id="amount" name="amount">
+                    <h6 class="caption">請填寫金額</h6>
+                  </div>
+                  <div class="cart-comment">
+                    <input id="donor" name="donor" type="text" placeholder="金主留言（選填）" spellcheck="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="cartModule batch">
               <div class="media">
                 <button class="default white mBtn fluid raise-setAll-show" id="raise-setAll-show"><i class="pt-setting inline"></i>月供</button>
                 <h5>鑒於系統所限，每位主持／文青的月供金額必須相同、且不可與單次課金一同付款。不便之處敬請原諒。</h5>
@@ -2328,7 +2356,7 @@
                   <button class="default white mBtn fluid raise-setAll-hide" id="raise-setAll-hide">隱藏</button>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="cartModule onetime" id="host01">
               <div class="media">
                 <div class="imgBox"></div>
@@ -2341,68 +2369,11 @@
                     <input value="100" type="tel" min="100">
                     <h6 class="caption">請填寫金額</h6>
                   </div>
-                  <div class="cart-comment">
+                  <!-- <div class="cart-comment">
                     <input type="text" placeholder="金主留言（選填）" spellcheck="false">
-                  </div>
-                  <button class="default cart-remove"><i class="pt-cross"></i></button>
+                  </div> -->
                 </div>
-              </div>
-            </div>
-            <div class="cartModule onetime" id="host02">
-              <div class="media">
-                <div class="imgBox"></div>
-                <div class="textBox">
-                  <h4>法國佬</h4>
-                  <h5>主持<span class="onetime">單次課金</span><span class="monthly">月供半年</span><span class="yearly">月供一年</span></h5>
-                </div>
-                <div class="cart-fieldset">
-                  <div class="cart-value">
-                    <input value="100" type="tel" min="100">
-                    <h6 class="caption">請填寫金額</h6>
-                  </div>
-                  <div class="cart-comment">
-                    <input type="text" placeholder="金主留言（選填）" spellcheck="false">
-                  </div>
-                  <button class="default cart-remove"><i class="pt-cross"></i></button>
-                </div>
-              </div>
-            </div>
-            <div class="cartModule onetime" id="host03">
-              <div class="media">
-                <div class="imgBox"></div>
-                <div class="textBox">
-                  <h4>鄭松泰</h4>
-                  <h5>主持<span class="onetime">單次課金</span><span class="monthly">月供半年</span><span class="yearly">月供一年</span></h5>
-                </div>
-                <div class="cart-fieldset">
-                  <div class="cart-value">
-                    <input value="100" type="tel" min="100">
-                    <h6 class="caption">請填寫金額</h6>
-                  </div>
-                  <div class="cart-comment">
-                    <input type="text" placeholder="金主留言（選填）" spellcheck="false">
-                  </div>
-                  <button class="default cart-remove"><i class="pt-cross"></i></button>
-                </div>
-              </div>
-            </div>
-            <div class="cartModule onetime" id="host03">
-              <div class="media">
-                <div class="imgBox"></div>
-                <div class="textBox">
-                  <h4>鄭松泰</h4>
-                  <h5>文青<span class="onetime">單次課金</span><span class="monthly">月供半年</span><span class="yearly">月供一年</span></h5>
-                </div>
-                <div class="cart-fieldset">
-                  <div class="cart-value">
-                    <input value="100" type="tel" min="100">
-                    <h6 class="caption">請填寫金額</h6>
-                  </div>
-                  <div class="cart-comment">
-                    <input type="text" placeholder="金主留言（選填）" spellcheck="false">
-                  </div>
-                  <button class="default cart-remove"><i class="pt-cross"></i></button>
-                </div>
+                <button class="default cart-remove"><i class="pt-cross"></i></button>
               </div>
             </div>
           </div>
